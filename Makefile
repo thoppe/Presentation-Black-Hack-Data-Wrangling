@@ -2,7 +2,7 @@ title  = "Black Hat Data Wrangling"
 author = "Travis Hoppe & Robert Dempsey"
 
 target = "BHDW_DW_meetup.md"
-html_target = "BHDW_DW_meetup.index"
+html_target = "BHDW_DW_meetup.html"
 
 python_exec    = python
 md2reveal_exec = md2reveal/md2reveal.py
