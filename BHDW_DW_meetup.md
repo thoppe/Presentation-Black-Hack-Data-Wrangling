@@ -25,7 +25,7 @@ Let's assume there are "laws" that you have to "comply" with...
 !(images/drevil.jpg)  <<height:300px>>
 !(images/drevil3.jpg) <<height:300px>>
 ====+
-### Black Hack Data Wranglering Rules:
+### Black Hack Data Wrangling Rules:
 You have a sizable amount of data.
 This data must be made "public".
 Make it as computer-unfriendly, but human readable.
@@ -36,7 +36,7 @@ Hide what you are doing to a casual user.
 ====
   
 ## BLACK HAT #1: Disable right-click
-implementation *EASY* : defense *TRIVIAL* : hack-level *AMATUER*
+implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
     <script language="javascript">
     document.onmousedown=disableclick;
