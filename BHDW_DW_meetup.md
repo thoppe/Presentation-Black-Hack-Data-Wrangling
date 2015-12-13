@@ -58,34 +58,17 @@ Hide what you are doing to a casual user.
 % https://imgflip.com/memegenerator/17089817/Dr-evil-quote
 ====
 
-% slide explaining the levels...
+slide explaining the levels...
 
 ====
-  
-## BLACK HAT #1: Disable right-click
-implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
-    <script language="javascript">
-    document.onmousedown=disableclick;
-    status="Right Click Disabled";
-    function disableclick(event) {
-      if(event.button==2) {
-         alert(status);
-         return false;    
-    } }
-    </script>
+% I moved all the hacks here so we have a nice split between
+% the intro and the content.
 
-====*
-
-## WHITE HAT #1: Disable right-click
-Open developers console (F12), search for `disableclick` and remove.
-_or_
-Turn of javascript.
-_or_
-Use any headless browser.
-  
+{"include":"hacks.md"}
 ====
-
-
 
 # Thanks you!
+
+Got any more Black Hat Hacks? Let us know!
+[@metasemantic](https://twitter.com/metasemantic) / [@rdempsey](https://twitter.com/rdempsey)
