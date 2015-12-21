@@ -24,6 +24,23 @@ Use any headless browser.
 ## BLACK HAT #2: Minification
 implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
+HTMLMinifier: https://github.com/kangax/html-minifier
+
+Removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.
+
+Ruby wrapper: https://github.com/stereobooster/html_minifier
+
+
+====*
+
+## WHITE HAT #2: Minification
+De-minify the HTML using freely available tools.
+
+Unminify: http://unminify.com/
+Tidy HTML package in Sublime Text 2 and 3.
+JS Beautifier: http://jsbeautifier.org/ (also available as a Python module)
+
+
 ====
 ## BLACK HAT #3: Cookies/OAuth2
 implementation *EASY* : defense *TRIVIAL* : hack-level *NEW HIRE*
