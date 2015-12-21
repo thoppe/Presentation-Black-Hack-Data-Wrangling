@@ -24,11 +24,9 @@ Use any headless browser.
 ## BLACK HAT #2: Minification
 implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
-HTMLMinifier: https://github.com/kangax/html-minifier
+[Kangax HTML Minifier](https://github.com/kangax/html-minifier): removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.
 
-Removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.
-
-Ruby wrapper: https://github.com/stereobooster/html_minifier
+Ruby wrapper: [html_minifier](https://github.com/stereobooster/html_minifier)
 
 
 ====*
@@ -36,10 +34,13 @@ Ruby wrapper: https://github.com/stereobooster/html_minifier
 ## WHITE HAT #2: Minification
 De-minify the HTML using freely available tools.
 
-Unminify: http://unminify.com/
-Tidy HTML package in Sublime Text 2 and 3.
-JS Beautifier: http://jsbeautifier.org/ (also available as a Python module)
-
+Online tools: [Unminify](http://unminify.com/), [JS Beautifier]()
+_or_
+Text editor: [HTML Tidy](https://github.com/welovewordpress/SublimeHtmlTidy) (Sublime Text)
+_or_
+Automate it: [JS Beautifier](https://github.com/beautify-web/js-beautify)
+    $ pip install jsbeautifier
+    $ js-beautify file.js
 
 ====
 ## BLACK HAT #3: Cookies/OAuth2
@@ -48,6 +49,22 @@ implementation *EASY* : defense *TRIVIAL* : hack-level *NEW HIRE*
 ====
 ## BLACK HAT #4: Data limits & time delays
 implementation *MEDIUM* : defense *MEDIUM* : hack-level *ENTRY-LEVEL*
+
+Detection: high download rates or unusual traffic within a given timespan; all traffic from a single client or IP address.
+
+Rate limit individual IP addresses or a specific id.
+Delay content delivery.
+Return HTTP 301, 40x or 50x errors ([full list](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html))
+
+
+====*
+
+## WHITE HAT #4: Data limits & time delays
+Frequently change your IP address using [VPN/proxy services](http://robertwdempsey.com/hma) or [TOR](https://www.torproject.org/).
+_and_
+Slow down your scraper: Scrapy [autothrottle](http://doc.scrapy.org/en/latest/topics/autothrottle.html), custom timing code
+_and_
+Change your user agent: Scrapy [random user agent](https://github.com/cnu/scrapy-random-useragent), [custom Python code](http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen)
 
 ====
 ## BLACK HAT #5: Rendering to images / PDF

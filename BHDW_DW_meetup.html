@@ -144,19 +144,18 @@ function disableclick(event) {
 <h2>BLACK HAT #2: Minification</h2>implementation <strong>EASY</strong> : defense <strong>TRIVIAL</strong> : hack-level <strong>AMATEUR</strong></p>
 <br>
 <p>
-HTMLMinifier: https://github.com/kangax/html-minifier</p>
+<a href="https://github.com/kangax/html-minifier">Kangax HTML Minifier</a>: removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.</p>
 <br>
 <p>
-Removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.</p>
-<br>
-<p>
-Ruby wrapper: https://github.com/stereobooster/html_minifier</p>
+Ruby wrapper: <a href="https://github.com/stereobooster/html_minifier">html_minifier</a></p>
 </section><section   class="vertical-slide">
 <p>
 <h2>WHITE HAT #2: Minification</h2>De-minify the HTML using freely available tools.</p>
 <br>
 <p>
-Unminify: http://unminify.com/<br>Tidy HTML package in Sublime Text 2 and 3.<br>JS Beautifier: http://jsbeautifier.org/ (also available as a Python module)</p>
+Online tools: <a href="http://unminify.com/">Unminify</a>, <a href="">JS Beautifier</a><br><em>or</em><br>Text editor: <a href="https://github.com/welovewordpress/SublimeHtmlTidy">HTML Tidy</a> (Sublime Text)<br><em>or</em><br>Automate it: <a href="https://github.com/beautify-web/js-beautify">JS Beautifier</a></p>
+<pre><code class=python>$ pip install jsbeautifier
+$ js-beautify file.js</code></pre>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
@@ -167,6 +166,15 @@ Unminify: http://unminify.com/<br>Tidy HTML package in Sublime Text 2 and 3.<br>
 <section   class="vertical-slide">
 <p>
 <h2>BLACK HAT #4: Data limits & time delays</h2>implementation <strong>MEDIUM</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>ENTRY-LEVEL</strong></p>
+<br>
+<p>
+Detection: high download rates or unusual traffic within a given timespan; all traffic from a single client or IP address.</p>
+<br>
+<p>
+Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<br>Return HTTP 301, 40x or 50x errors (<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">full list</a>)</p>
+</section><section   class="vertical-slide">
+<p>
+<h2>WHITE HAT #4: Data limits & time delays</h2>Frequently change your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a>.<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
