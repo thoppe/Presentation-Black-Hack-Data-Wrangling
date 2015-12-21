@@ -70,13 +70,13 @@ Change your user agent: Scrapy [random user agent](https://github.com/cnu/scrapy
 ## BLACK HAT #5: Rendering to images / PDF
 implementation *NON TRIVAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
 
-[PHP Text to Image](https://www.daftlogic.com/projects-text-to-image.htm)
+###Text to Image
+[PHP Text to Image](https://www.daftlogic.com/projects-text-to-image.htm) / [ImageMagick](http://www.imagemagick.org/script/index.php)
 _or_
-[ImageMagick](http://www.imagemagick.org/script/index.php)
-_or_
-Draw text onto an HTML5 canvas using [JavaScript](http://jsfiddle.net/JUWrV/)
-_or_
-Use the HTML5 [canvasElement.toDataURL](http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting) element
+Draw text onto an HTML5 canvas using [JavaScript](http://jsfiddle.net/JUWrV/) / use the HTML5 [canvasElement.toDataURL](http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting) element
+
+###Text to PDF
+[PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) or [PDFKit](http://pdfkit.org/)  (node.js)
 
 ====*
 
