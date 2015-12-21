@@ -70,9 +70,37 @@ Change your user agent: Scrapy [random user agent](https://github.com/cnu/scrapy
 ## BLACK HAT #5: Rendering to images / PDF
 implementation *NON TRIVAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
 
+[PHP Text to Image](https://www.daftlogic.com/projects-text-to-image.htm)
+_or_
+[ImageMagick](http://www.imagemagick.org/script/index.php)
+_or_
+Draw text onto an HTML5 canvas using [JavaScript](http://jsfiddle.net/JUWrV/)
+_or_
+Use the HTML5 [canvasElement.toDataURL](http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting) element
+
+====*
+
+## WHITE HAT #5: Rending to images / PDF
+
+Server or desktop-based OCR software
+_or_
+Adobe Acrobat: Image -> PDF -> OCR (manual)
+_or_
+Python: [OCRopus](https://github.com/tmbdev/ocropy)
+_or_
+[Tesseract Open Source OCR Engine](https://github.com/tesseract-ocr/tesseract)
+
+
 ====
 ## BLACK HAT #6: JavaScript links to loop through pages
 implementation *STANDARD* : defense *MEDIUM* : hack-level *JUNIOR-LEVEL*
+
+
+====*
+
+## WHITE HAT #6: JavaScript links to loop through pages
+
+
 
 ====
 ## BLACK HAT #7: Watermarking & Honeypots
