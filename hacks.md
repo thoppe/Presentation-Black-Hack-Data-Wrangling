@@ -109,6 +109,27 @@ implementation *HARD* : defense *SUBTLE* : hack-level *SECURITY ANALYST*
 ====
 ## BLACK HAT #8: Lack of proper HTML/CSS markup 
 implementation *XXXX* : defense *XXXX* : hack-level *EXTREME APATHY*
+alternatively break the user interface
+
+Examples: [http://arngren.net/](http://arngren.net/)
+
+Remove all `class` and `id` labels, example
+    <div class="author">
+        <div class="firstname">Preston </div>
+        <div class="lastname"> Garvey  </div>
+    <div>
+    
+    <div class="author">
+        <div class="firstname">Piper </div> 
+        <div class="lastname"> Wright  </div>
+    <div>
+
+Remove all `class` and `id` labels, example
+
+    <div style="font-weight: bold;">
+    Preston Garvey </br>
+    Piper Wright
+    </div>
 
 ====
 ## BLACK HAT #9: IP limits

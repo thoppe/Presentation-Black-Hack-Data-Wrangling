@@ -209,7 +209,31 @@ Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> P
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #8: Lack of proper HTML/CSS markup</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>EXTREME APATHY</strong></p>
+<h2>BLACK HAT #8: Lack of proper HTML/CSS markup</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>EXTREME APATHY</strong><br>alternatively breaking the user interface</p>
+<br>
+<p>
+Examples: <a href="http://arngren.net/">http://arngren.net/</a></p>
+<br>
+<p>
+Remove all <code>class</code> and <code>id</code> labels, example</p>
+<br>
+<pre><code class=python>&lt;div class=&quot;author&quot;&gt;
+    &lt;div class=&quot;firstname&quot;&gt;Preston &lt;/div&gt;
+    &lt;div class=&quot;lastname&quot;&gt; Garvey  &lt;/div&gt;
+&lt;div&gt;
+
+&lt;div class=&quot;author&quot;&gt;
+    &lt;div class=&quot;firstname&quot;&gt;Piper &lt;/div&gt; 
+    &lt;div class=&quot;lastname&quot;&gt; Wright  &lt;/div&gt;
+&lt;div&gt;</code></pre>
+<br>
+<p>
+Remove all <code>class</code> and <code>id</code> labels, example</p>
+<br>
+<pre><code class=python>&lt;div style=&quot;font-weight: bold;&quot;&gt;
+Preston Garvey &lt;/br&gt;
+Piper Wright
+&lt;/div&gt;</code></pre>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
