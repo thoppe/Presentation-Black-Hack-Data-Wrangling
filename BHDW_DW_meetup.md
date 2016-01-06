@@ -18,8 +18,13 @@
 ====*
 
 ## White-hat data wrangler
-Working hard to make your data accessible to others.
-!(images/dcdw_logo.jpg) <<height:500px; transparent>>
+Working hard to make your data *accessible* to others.
+!(images/dcdw_logo.jpg)   <<height:200px; transparent>>
+!(images/DSDC_logo.png)   <<height:200px; transparent>>
+!(images/nyc_dw_logo.png) <<height:200px; transparent>>
+
+
+
 
 _But what if you don't want people to have your data...?_
 %_and for one reason or another you have to put it out there for all to see...?_
@@ -27,22 +32,22 @@ _But what if you don't want people to have your data...?_
 ====*
 
 ## Black-hat data wrangler
-Working hard to make your data as inaccessible as possible.
+Working hard to make your data as *inaccessible* as possible.
 
-% Maybe this? http://giphy.com/gifs/evil-aladdin-jafar-8XaceDrB8kYY8
+!(images/evil_mrburns.png)  <<height:200px; transparent>>
+!(images/evil_cards.jpg) <<height:200px; transparent>>
+!(images/evil_umbrella2.png) <<height:200px; transparent>>
+
 
 What kind of data?
 
-Corporate finance data.
-Dontations.
-Regulations (can't track it if you can't see it)
-Anti-FOIA
-Digital Marketer
+_Corporate finance / Political Dontations / Regulations /_
+_ Anti-FOIA / Digital Marketer / ..._
 
 ====*
 
 ## Why not disconnect from the net?
-Let's assume there are "laws" that you have to "comply" with...
+
 
 !(images/drevil2.jpg) <<height:300px>>
 !(images/drevil.jpg)  <<height:300px>>

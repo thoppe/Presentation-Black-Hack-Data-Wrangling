@@ -13,7 +13,7 @@ all:
 	$(python_exec) $(md2reveal_exec) $(target) --output $(html_target) $(args)
 
 edit:
-	emacs $(target) &
+	emacs hacks.md &
 
 commit:
 	@-make push

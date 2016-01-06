@@ -1,4 +1,5 @@
-## BLACK HAT #1: Disable right-click
+## BLACK HAT #1:
+## Disable right-click
 implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
     <script language="javascript">
@@ -14,11 +15,12 @@ implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 ====*
 
 ## WHITE HAT #1: Disable right-click
-Open developers console (F12), search for `disableclick` and remove.
-_or_
-Turn of javascript.
-_or_
-Use any headless browser.
+
+###  Open developers console (F12), search for `disableclick` and remove.
+
+### Turn of javascript.
+
+### Use any headless browser.
 
 ====
 ## BLACK HAT #2: Minification
@@ -47,7 +49,8 @@ Automate it: [JS Beautifier](https://github.com/beautify-web/js-beautify)
 implementation *EASY* : defense *TRIVIAL* : hack-level *NEW HIRE*
 
 ====
-## BLACK HAT #4: Data limits & time delays
+## BLACK HAT #4:
+## Data limits & time delays
 implementation *MEDIUM* : defense *MEDIUM* : hack-level *ENTRY-LEVEL*
 
 Detection: high download rates or unusual traffic within a given timespan; all traffic from a single client or IP address.
@@ -59,7 +62,8 @@ Return HTTP 301, 40x or 50x errors ([full list](http://www.w3.org/Protocols/rfc2
 
 ====*
 
-## WHITE HAT #4: Data limits & time delays
+## WHITE HAT #4:
+## Data limits & time delays
 Frequently change your IP address using [VPN/proxy services](http://robertwdempsey.com/hma) or [TOR](https://www.torproject.org/).
 _and_
 Slow down your scraper: Scrapy [autothrottle](http://doc.scrapy.org/en/latest/topics/autothrottle.html), custom timing code
@@ -67,7 +71,8 @@ _and_
 Change your user agent: Scrapy [random user agent](https://github.com/cnu/scrapy-random-useragent), [custom Python code](http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen)
 
 ====
-## BLACK HAT #5: Rendering to images / PDF
+## BLACK HAT #5:
+## Rendering to images / PDF
 implementation *NON TRIVAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
 
 ###Text to Image
@@ -80,7 +85,8 @@ Draw text onto an HTML5 canvas using [JavaScript](http://jsfiddle.net/JUWrV/) / 
 
 ====*
 
-## WHITE HAT #5: Rending to images / PDF
+## WHITE HAT #5
+## Rending to images / PDF
 
 Server or desktop-based OCR software
 _or_
@@ -92,28 +98,42 @@ _or_
 
 
 ====
-## BLACK HAT #6: JavaScript links to loop through pages
+## BLACK HAT #6:
+## JavaScript page links
 implementation *STANDARD* : defense *MEDIUM* : hack-level *JUNIOR-LEVEL*
 
 
 ====*
 
-## WHITE HAT #6: JavaScript links to loop through pages
-
-
+## WHITE HAT #6:
+## JavaScript page links
 
 ====
-## BLACK HAT #7: Watermarking & Honeypots
+## BLACK HAT #7:
+## Watermarking & Honeypots
 implementation *HARD* : defense *SUBTLE* : hack-level *SECURITY ANALYST*
 
 ====
-## BLACK HAT #8: Lack of proper HTML/CSS markup 
-implementation *XXXX* : defense *XXXX* : hack-level *EXTREME APATHY*
-alternatively break the user interface
+## BLACK HAT #8:
+## Remove markup metadata
+implementation *XXXX* : defense *XXXX* : hack-level *MASOCHIST*
 
-Examples: [http://arngren.net/](http://arngren.net/)
+### Two ways:
+#### 1. Break the standard UX design.
+#### 2. Remove proper HTML/CSS markup.
 
-Remove all `class` and `id` labels, example
+Organized webpage = Organized data = Easy rip
+  
+====*
+
+Eschew all user design and layer components dynamically.
+Example: [http://arngren.net/](http://arngren.net/)
+!(images/badUX_arngren.png)
+  
+====*
+
+Remove markup. You can't rip what you can't see.
+
     <div class="author">
         <div class="firstname">Preston </div>
         <div class="lastname"> Garvey  </div>
@@ -123,9 +143,8 @@ Remove all `class` and `id` labels, example
         <div class="firstname">Piper </div> 
         <div class="lastname"> Wright  </div>
     <div>
-
-Remove all `class` and `id` labels, example
-
+  
+    <!-- Remove all class and id labels, like this --> 
     <div style="font-weight: bold;">
     Preston Garvey </br>
     Piper Wright

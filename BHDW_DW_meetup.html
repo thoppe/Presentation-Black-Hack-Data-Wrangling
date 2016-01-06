@@ -69,29 +69,64 @@
 <h2>How can you <strong><strike>stop</strike></strong> slow them?</h2></p>
 </section><section   class="vertical-slide">
 <p>
-<h2>White-hat data wrangler</h2>Working hard to make your data accessible to others.</p>
+<h2>White-hat data wrangler</h2>Working hard to make your data <strong>accessible</strong> to others.</p>
 <figure>
     <a href="images/dcdw_logo.jpg">
-    <img class="transparent_image" src="images/dcdw_logo.jpg" height="500px">
+    <img class="transparent_image" src="images/dcdw_logo.jpg" height="200px">
     </a>
     
     </figure>
+<figure>
+    <a href="images/DSDC_logo.png">
+    <img class="transparent_image" src="images/DSDC_logo.png" height="200px">
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/nyc_dw_logo.png">
+    <img class="transparent_image" src="images/nyc_dw_logo.png" height="200px">
+    </a>
+    
+    </figure>
+<br>
+<br>
+<br>
 <br>
 <p>
 <em>But what if you don't want people to have your data...?</em></p>
 </section><section   class="vertical-slide">
 <p>
-<h2>Black-hat data wrangler</h2>Working hard to make your data as inaccessible as possible.</p>
+<h2>Black-hat data wrangler</h2>Working hard to make your data as <strong>inaccessible</strong> as possible.</p>
+<br>
+<figure>
+    <a href="images/evil_mrburns.png">
+    <img class="transparent_image" src="images/evil_mrburns.png" height="200px">
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/evil_cards.jpg">
+    <img class="transparent_image" src="images/evil_cards.jpg" height="200px">
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/evil_umbrella2.png">
+    <img class="transparent_image" src="images/evil_umbrella2.png" height="200px">
+    </a>
+    
+    </figure>
 <br>
 <br>
 <p>
 What kind of data?</p>
 <br>
 <p>
-Corporate finance data.<br>Dontations.<br>Regulations (can't track it if you can't see it)<br>Anti-FOIA<br>Digital Marketer</p>
+<em>Corporate finance / Political Dontations / Regulations /</em><br><em> Anti-FOIA / Digital Marketer / ...</em></p>
 </section><section   class="vertical-slide">
 <p>
-<h2>Why not disconnect from the net?</h2>Let's assume there are "laws" that you have to "comply" with...</p>
+<h2>Why not disconnect from the net?</h2></p>
+<br>
 <br>
 <figure>
     <a href="images/drevil2.jpg">
@@ -123,7 +158,7 @@ slide explaining the levels...</p>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #1: Disable right-click</h2>implementation <strong>EASY</strong> : defense <strong>TRIVIAL</strong> : hack-level <strong>AMATEUR</strong></p>
+<h2>BLACK HAT #1:</h2><h2>Disable right-click</h2>implementation <strong>EASY</strong> : defense <strong>TRIVIAL</strong> : hack-level <strong>AMATEUR</strong></p>
 <br>
 <pre><code class=python>&lt;script language=&quot;javascript&quot;&gt;
 document.onmousedown=disableclick;
@@ -136,7 +171,16 @@ function disableclick(event) {
 &lt;/script&gt;</code></pre>
 </section><section   class="vertical-slide">
 <p>
-<h2>WHITE HAT #1: Disable right-click</h2>Open developers console (F12), search for <code>disableclick</code> and remove.<br><em>or</em><br>Turn of javascript.<br><em>or</em><br>Use any headless browser.</p>
+<h2>WHITE HAT #1: Disable right-click</h2></p>
+<br>
+<p>
+<h3>Open developers console (F12), search for <code>disableclick</code> and remove.</h3></p>
+<br>
+<p>
+<h3>Turn of javascript.</h3></p>
+<br>
+<p>
+<h3>Use any headless browser.</h3></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
@@ -165,7 +209,7 @@ $ js-beautify file.js</code></pre>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #4: Data limits & time delays</h2>implementation <strong>MEDIUM</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>ENTRY-LEVEL</strong></p>
+<h2>BLACK HAT #4:</h2><h2>Data limits & time delays</h2>implementation <strong>MEDIUM</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>ENTRY-LEVEL</strong></p>
 <br>
 <p>
 Detection: high download rates or unusual traffic within a given timespan; all traffic from a single client or IP address.</p>
@@ -174,12 +218,12 @@ Detection: high download rates or unusual traffic within a given timespan; all t
 Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<br>Return HTTP 301, 40x or 50x errors (<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">full list</a>)</p>
 </section><section   class="vertical-slide">
 <p>
-<h2>WHITE HAT #4: Data limits & time delays</h2>Frequently change your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a>.<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
+<h2>WHITE HAT #4:</h2><h2>Data limits & time delays</h2>Frequently change your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a>.<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #5: Rendering to images / PDF</h2>implementation <strong>NON TRIVAL</strong> : defense <strong>PRETTY GOOD</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
+<h2>BLACK HAT #5:</h2><h2>Rendering to images / PDF</h2>implementation <strong>NON TRIVAL</strong> : defense <strong>PRETTY GOOD</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
 <br>
 <p>
 <h3>Text to Image</h3><a href="https://www.daftlogic.com/projects-text-to-image.htm">PHP Text to Image</a> / <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a><br><em>or</em><br>Draw text onto an HTML5 canvas using <a href="http://jsfiddle.net/JUWrV/">JavaScript</a> / use the HTML5 <a href="http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting">canvasElement.toDataURL</a> element</p>
@@ -188,7 +232,7 @@ Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<
 <h3>Text to PDF</h3><a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a> or <a href="http://pdfkit.org/">PDFKit</a> (node.js)</p>
 </section><section   class="vertical-slide">
 <p>
-<h2>WHITE HAT #5: Rending to images / PDF</h2></p>
+<h2>WHITE HAT #5</h2><h2>Rending to images / PDF</h2></p>
 <br>
 <p>
 Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> PDF -> OCR (manual)<br><em>or</em><br>Python: <a href="https://github.com/tmbdev/ocropy">OCRopus</a><br><em>or</em><br><a href="https://github.com/tesseract-ocr/tesseract">Tesseract Open Source OCR Engine</a></p>
@@ -196,26 +240,38 @@ Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> P
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #6: JavaScript links to loop through pages</h2>implementation <strong>STANDARD</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
+<h2>BLACK HAT #6:</h2><h2>JavaScript page links</h2>implementation <strong>STANDARD</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
 </section><section   class="vertical-slide">
 <p>
-<h2>WHITE HAT #6: JavaScript links to loop through pages</h2></p>
+<h2>WHITE HAT #6:</h2><h2>JavaScript page links</h2></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #7: Watermarking & Honeypots</h2>implementation <strong>HARD</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>SECURITY ANALYST</strong></p>
+<h2>BLACK HAT #7:</h2><h2>Watermarking & Honeypots</h2>implementation <strong>HARD</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>SECURITY ANALYST</strong></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #8: Lack of proper HTML/CSS markup</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>EXTREME APATHY</strong><br>alternatively breaking the user interface</p>
+<h2>BLACK HAT #8:</h2><h2>Remove markup metadata</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>MASOCHIST</strong></p>
 <br>
 <p>
-Examples: <a href="http://arngren.net/">http://arngren.net/</a></p>
+<h3>Two ways:</h3><h4>1. Break the standard UX design.</h4><h4>2. Remove proper HTML/CSS markup.</h4></p>
 <br>
 <p>
-Remove all <code>class</code> and <code>id</code> labels, example</p>
+Organized webpage = Organized data = Easy rip</p>
+</section><section   class="vertical-slide">
+<p>
+Eschew all user design and layer components dynamically.<br>Example: <a href="http://arngren.net/">http://arngren.net/</a></p>
+<figure>
+    <a href="images/badUX_arngren.png">
+    <img class="" src="images/badUX_arngren.png" >
+    </a>
+    
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+Remove markup. You can't rip what you can't see.</p>
 <br>
 <pre><code class=python>&lt;div class=&quot;author&quot;&gt;
     &lt;div class=&quot;firstname&quot;&gt;Preston &lt;/div&gt;
@@ -227,10 +283,8 @@ Remove all <code>class</code> and <code>id</code> labels, example</p>
     &lt;div class=&quot;lastname&quot;&gt; Wright  &lt;/div&gt;
 &lt;div&gt;</code></pre>
 <br>
-<p>
-Remove all <code>class</code> and <code>id</code> labels, example</p>
-<br>
-<pre><code class=python>&lt;div style=&quot;font-weight: bold;&quot;&gt;
+<pre><code class=python>&lt;!-- Remove all class and id labels, like this --&gt; 
+&lt;div style=&quot;font-weight: bold;&quot;&gt;
 Preston Garvey &lt;/br&gt;
 Piper Wright
 &lt;/div&gt;</code></pre>
