@@ -53,11 +53,14 @@ _ Anti-FOIA / Digital Marketer / ..._
 !(images/drevil.jpg)  <<height:300px>>
 !(images/drevil3.jpg) <<height:300px>>
 ====*
-### Black Hack Data Wrangling Rules:
-You have a sizable amount of data.
-This data must be made "public".
-Make it as computer-unfriendly, but human readable.
-Hide what you are doing to a casual user.
+
+# When do you need a
+## Black Hack Data Wrangler?
+
+### You have a *large* amount of data.
+### The data must be made *public*.
+### Should be human readable but *computer-unfriendly*.
+### Your actions should be *hidden* to a casual user.
 
 % images from
 % https://imgflip.com/memegenerator/17089817/Dr-evil-quote
