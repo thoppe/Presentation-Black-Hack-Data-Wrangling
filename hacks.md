@@ -12,6 +12,8 @@ implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
     } }
     </script>
 
+I hope you hate accessibility!  
+
 ====*
 
 ## WHITE HAT #1: Disable right-click
@@ -46,7 +48,23 @@ Automate it: [JS Beautifier](https://github.com/beautify-web/js-beautify)
 
 ====
 ## BLACK HAT #3: Cookies/OAuth2
-implementation *EASY* : defense *TRIVIAL* : hack-level *NEW HIRE*
+implementation *EASY* : defense *MEDIUM* : hack-level *NEW HIRE*
+
+#### not RESTful?
+Implement vistor control via `$SESSONS`. Give every new visitor to the site a unique ID that you control and limit access with. Bonus, restrict user-agent.
+
+#### REST API?
+Require all meaningful data requests to go through OAuth2, cumbersome for new-comers and direct control over the data distribution.
+
+====*
+## WHITE HAT #3: Cookies/OAuth2
+
+Create session ID's with headless browsers
+_and_
+simulate user-agents
+
+Poorly designed session states (that don't clear and hold
+large internal variables) can DoS your server!
 
 ====
 ## BLACK HAT #4:
@@ -101,17 +119,41 @@ _or_
 ## BLACK HAT #6:
 ## JavaScript page links
 implementation *STANDARD* : defense *MEDIUM* : hack-level *JUNIOR-LEVEL*
+Infinite pagnation/scroll. Ex. [Dribble](https://dribbble.com/) 
 
+Forces the user to simulate AJAX (stops headless browsers).
+Combine with user sessions and data limits!
+
+!(images/infinite_scroll.gif) <<height:300px>> Image from [visualhierarchy](https://visualhierarchy.co/blog/wp-content/uploads/2015/09/infinite_scroll.gif)
+
+% https://dribbble.com/shots/2152555-I-Hate-Infinite-Scroll
+====* !(images/infinite-hate.gif)
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<font color="black">
+[Psychology in Human-Computer Interaction](http://videolectures.net/chi08_kieras_phc/) by David Kieras
+shows this frustrates the user with lack of control.
+
+Image from [Per Vestman@Dribble](https://dribbble.com/shots/2152555-I-Hate-Infinite-Scroll)
+</font>
 
 ====*
 
 ## WHITE HAT #6:
 ## JavaScript page links
 
+Stateful browser can slowly pull the data like a real user.
+
+SHOW EXAMPLE:
+
 ====
 ## BLACK HAT #7:
 ## Watermarking & Honeypots
 implementation *HARD* : defense *SUBTLE* : hack-level *SECURITY ANALYST*
+
+Poison the well! Leave fake data buried deep within the dataset!
+
+Data should be identifiable and track the user IP.
 
 ====
 ## BLACK HAT #8:

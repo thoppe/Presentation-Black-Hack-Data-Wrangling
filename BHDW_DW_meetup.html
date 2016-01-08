@@ -172,6 +172,9 @@ function disableclick(event) {
      return false;    
 } }
 &lt;/script&gt;</code></pre>
+<br>
+<p>
+I hope you hate accessibility!</p>
 </section><section   class="vertical-slide">
 <p>
 <h2>WHITE HAT #1: Disable right-click</h2></p>
@@ -207,7 +210,22 @@ $ js-beautify file.js</code></pre>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #3: Cookies/OAuth2</h2>implementation <strong>EASY</strong> : defense <strong>TRIVIAL</strong> : hack-level <strong>NEW HIRE</strong></p>
+<h2>BLACK HAT #3: Cookies/OAuth2</h2>implementation <strong>EASY</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>NEW HIRE</strong></p>
+<br>
+<p>
+<h4>not RESTful?</h4>Implement vistor control via <code>$SESSONS</code>. Give every new visitor to the site a unique ID that you control and limit access with. Bonus, restrict user-agent.</p>
+<br>
+<p>
+<h4>REST API?</h4>Require all meaningful data requests to go through OAuth2, cumbersome for new-comers and direct control over the data distribution.</p>
+</section><section   class="vertical-slide">
+<p>
+<h2>WHITE HAT #3: Cookies/OAuth2</h2></p>
+<br>
+<p>
+Create session ID's with headless browsers<br><em>and</em><br>simulate user-agents</p>
+<br>
+<p>
+Poorly designed session states (that don't clear and hold<br>large internal variables) can DoS your server!</p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
@@ -243,15 +261,43 @@ Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> P
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h2>BLACK HAT #6:</h2><h2>JavaScript page links</h2>implementation <strong>STANDARD</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
+<h2>BLACK HAT #6:</h2><h2>JavaScript page links</h2>implementation <strong>STANDARD</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>JUNIOR-LEVEL</strong><br>Infinite pagnation/scroll. Ex. <a href="https://dribbble.com/">Dribble</a></p>
+<br>
+<p>
+Forces the user to simulate AJAX (stops headless browsers).<br>Combine with user sessions and data limits!</p>
+<br>
+<figure>
+    <a href="images/infinite_scroll.gif">
+    <img class="" src="images/infinite_scroll.gif" height="300px">
+    </a>
+    <figcaption>Image from <a href="https://visualhierarchy.co/blog/wp-content/uploads/2015/09/infinite_scroll.gif">visualhierarchy</a></figcaption>
+    </figure>
+</section><section  data-background="images/infinite-hate.gif" class="vertical-slide">
+<p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><font color="black"><br><a href="http://videolectures.net/chi08_kieras_phc/">Psychology in Human-Computer Interaction</a> by David Kieras<br>shows this frustrates the user with lack of control.</p>
+<br>
+<p>
+Image from <a href="https://dribbble.com/shots/2152555-I-Hate-Infinite-Scroll">Per Vestman@Dribble</a><br></font></p>
 </section><section   class="vertical-slide">
 <p>
 <h2>WHITE HAT #6:</h2><h2>JavaScript page links</h2></p>
+<br>
+<p>
+Stateful browser can slowly pull the data like a real user.</p>
+<br>
+<p>
+SHOW EXAMPLE:</p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
 <h2>BLACK HAT #7:</h2><h2>Watermarking & Honeypots</h2>implementation <strong>HARD</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>SECURITY ANALYST</strong></p>
+<br>
+<p>
+Poison the well! Leave fake data buried deep within the dataset!</p>
+<br>
+<p>
+Data should be identifiable and track the user IP.</p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
