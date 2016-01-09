@@ -172,7 +172,7 @@ implementation *HARD* : defense *SUBTLE* : hack-level *SECURITY ANALYST*
 !(images/watermark_examples/shutterstock1.jpg) <<height:300:px;transparent>> Easy to remove.
 !(images/watermark_examples/shutterstock2.jpg) <<height:300:px;transparent>> Requires time to remove, not automated.
 ====*
-## `BlackHat7:
+## `BlackHat7`:
 ## Watermarking & Honeypots
 
 #### Hard mode: Track users for ToS violations!
