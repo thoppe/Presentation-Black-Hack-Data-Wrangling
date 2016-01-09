@@ -18,8 +18,7 @@
 
 ==== [Hack1]
 
-## BLACK HAT #1: 
-## Disable right-click
+## `BlackHat1`:   Disable right-click
 implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
     <script language="javascript">
@@ -36,7 +35,7 @@ implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
 ====*
 <div class="whitehat">
-## WHITE HAT #1: Disable right-click
+## `WhiteHat1`: Disable right-click
 
 ###  Open developers console (F12), search for `disableclick` and remove.
 
@@ -46,7 +45,7 @@ implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 </div>
 
 ==== [Hack2]
-## BLACK HAT #2: Minification
+## `BlackHat2`: Minification
 implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
 [Kangax HTML Minifier](https://github.com/kangax/html-minifier): removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.
@@ -56,7 +55,7 @@ Ruby wrapper: [html_minifier](https://github.com/stereobooster/html_minifier)
 
 ====*
 
-## WHITE HAT #2: Minification
+## `WhiteHat2`: Minification
 De-minify the HTML using freely available tools.
 
 Online tools: [Unminify](http://unminify.com/), [JS Beautifier]()
@@ -68,7 +67,7 @@ Automate it: [JS Beautifier](https://github.com/beautify-web/js-beautify)
     $ js-beautify file.js
 
 ==== [Hack3]
-## BLACK HAT #3: 
+## `BlackHat3`: Authentication
 implementation *EASY* : defense *MEDIUM* : hack-level *NEW HIRE*
 
 #### not RESTful?
@@ -78,7 +77,7 @@ Implement vistor control via `$SESSONS`. Give every new visitor to the site a un
 Require all meaningful data requests to go through OAuth2, cumbersome for new-comers and direct control over the data distribution.
 
 ====*
-## WHITE HAT #3: Authentication
+## `WhiteHat3`: Authentication
 
 Create session ID's with headless browsers
 _and_
@@ -88,8 +87,7 @@ Poorly designed session states (that don't clear and hold
 large internal variables) can DoS your server!
 
 ==== [Hack4]
-## BLACK HAT #4:
-## Data limits & time delays
+## `BlackHat4:` Data & time limits
 implementation *MEDIUM* : defense *MEDIUM* : hack-level *ENTRY-LEVEL*
 
 Detection: high download rates or unusual traffic within a given timespan; 
@@ -102,7 +100,7 @@ Return HTTP 301, 40x or 50x errors ([full list](http://www.w3.org/Protocols/rfc2
 
 ====*
 
-## WHITE HAT #4:
+## `WhiteHat4`:
 ## Data limits & time delays
 Frequently change your IP address using [VPN/proxy services](http://robertwdempsey.com/hma) or [TOR](https://www.torproject.org/).
 _and_
@@ -111,8 +109,7 @@ _and_
 Change your user agent: Scrapy [random user agent](https://github.com/cnu/scrapy-random-useragent), [custom Python code](http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen)
 
 ==== [Hack5]
-## BLACK HAT #5:
-## Rendering to images / PDF
+## `BlackHat5`: Rendering & PDFs
 implementation *NON TRIVAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
 
 ###Text to Image
@@ -125,8 +122,7 @@ Draw text onto an HTML5 canvas using [JavaScript](http://jsfiddle.net/JUWrV/) / 
 
 ====*
 
-## WHITE HAT #5
-## Rending to images / PDF
+## `WhiteHat5`: Rending & PDFs
 
 Server or desktop-based OCR software
 _or_
@@ -138,7 +134,7 @@ _or_
 
 
 ==== [Hack6]
-## BLACK HAT #6: JavaScript page links
+## `BlackHat6`: JavaScript page links
 implementation *STANDARD* : defense *MEDIUM* : hack-level *JUNIOR-LEVEL*
 Infinite pagnation/scroll. Ex. [Dribble](https://dribbble.com/) 
 !(images/infinite_scroll.gif) <<height:300px>> 
@@ -161,15 +157,14 @@ shows this frustrates the user with lack of control.
 
 ====*
 
-## WHITE HAT #6:
-## JavaScript page links
+## `WhiteHat6`: JavaScript page links
 
 Stateful browser can slowly pull the data like a real user.
 
 SHOW EXAMPLE:
 
 ==== [Hack7]
-## BLACK HAT #7:
+## `BlackHat7`:
 ## Watermarking & Honeypots
 implementation *HARD* : defense *SUBTLE* : hack-level *SECURITY ANALYST*
 
@@ -177,7 +172,7 @@ implementation *HARD* : defense *SUBTLE* : hack-level *SECURITY ANALYST*
 !(images/watermark_examples/shutterstock1.jpg) <<height:300:px;transparent>> Easy to remove.
 !(images/watermark_examples/shutterstock2.jpg) <<height:300:px;transparent>> Requires time to remove, not automated.
 ====*
-## BLACK HAT #7:
+## `BlackHat7:
 ## Watermarking & Honeypots
 
 #### Hard mode: Track users for ToS violations!
@@ -186,7 +181,7 @@ Data should be identifiable and track the user IP.
 
 
 ==== [Hack8]
-## BLACK HAT #8:
+## `BlackHat8`:
 ## Remove markup metadata
 implementation *XXXX* : defense *XXXX* : hack-level *MASOCHIST*
 
@@ -223,18 +218,18 @@ Remove markup. You can't rip what you can't see.
     </div>
 
 ==== [Hack9]
-## BLACK HAT #9: IP limits
+## `BlackHat9`: IP limits
 implementation *EASY TO MESS UP* : defense *MEDIUM* : hack-level *XXXX*
 
 ==== [Hack10]
-## BLACK HAT #10: HTML obfuscation
+## `BlackHat10`: HTML obfuscation
 implementation *XXXX* : defense *XXXX* : hack-level *COMPU-JOCK*
 
 ==== [Hack11]
-## BLACK HAT #11: Random naming conventions for page elements 
+## `BlackHat11`: Random naming conventions for page elements 
 implementation *SANITY-REDUCING* : defense *EXECELLENT* : hack-level *CTHULHU*
 
 ==== [Hack12]
-## BLACK HAT #12: Font remapping
+## `BlackHat12`: Font remapping
 implementation *WTF* : defense *RIDICULOUS* : hack-level *MITNICK*
 

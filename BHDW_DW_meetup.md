@@ -5,7 +5,7 @@
 ### [Travis Hoppe](http://thoppe.github.io/) / [Robert Dempsey](http://robertwdempsey.com/about-robert-dempsey/)
 [@metasemantic](https://twitter.com/metasemantic) / [@rdempsey](https://twitter.com/rdempsey)
 
-<style>.whitehat {background:#333333;padding-bottom:50px !important;}</style>
+<style>.whitehat {background:#333333;padding-bottom:0px !important;}</style>
 
 ====
 
