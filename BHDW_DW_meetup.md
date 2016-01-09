@@ -4,7 +4,9 @@
 ----------
 ### [Travis Hoppe](http://thoppe.github.io/) / [Robert Dempsey](http://robertwdempsey.com/about-robert-dempsey/)
 [@metasemantic](https://twitter.com/metasemantic) / [@rdempsey](https://twitter.com/rdempsey)
-  
+
+<style>.whitehat {background:#333333;padding-bottom:50px !important;}</style>
+
 ====
 
 # Data Wranglers
@@ -55,12 +57,12 @@ _ Anti-FOIA / Digital Marketer / ..._
 ====*
 
 # When do you need a
-## Black Hack Data Wrangler?
+## _Black Hack Data Wrangler?_
 
-### You have a *large* amount of data.
-### The data must be made *public*.
-### Should be human readable but *computer-unfriendly*.
-### Your actions should be *hidden* to a casual user.
+### You have a *large* amount of data
+### The data must be made *public*
+### Should be human readable but *computer-unfriendly*
+### Your actions should be *hidden* to a casual user
 
 % images from
 % https://imgflip.com/memegenerator/17089817/Dr-evil-quote
@@ -68,13 +70,11 @@ _ Anti-FOIA / Digital Marketer / ..._
 
 slide explaining the levels...
 
-====
-
 % I moved all the hacks here so we have a nice split between
 % the intro and the content.
 
 {"include":"hacks.md"}
-====
+==== 
 
 # Thanks you!
 

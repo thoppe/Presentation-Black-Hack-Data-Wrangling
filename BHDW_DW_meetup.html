@@ -46,6 +46,9 @@
 <hr>
 <p>
 <h3><a href="http://thoppe.github.io/">Travis Hoppe</a> / <a href="http://robertwdempsey.com/about-robert-dempsey/">Robert Dempsey</a></h3><a href="https://twitter.com/metasemantic">@metasemantic</a> / <a href="https://twitter.com/rdempsey">@rdempsey</a></p>
+<br>
+<p>
+<style>.whitehat {background:#333333;padding-bottom:50px !important;}</style></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
@@ -148,10 +151,10 @@ What kind of data?</p>
     </figure>
 </section><section   class="vertical-slide">
 <p>
-<h1>When do you need a</h1><h2>Black Hack Data Wrangler?</h2></p>
+<h1>When do you need a</h1><h2><em>Black Hack Data Wrangler?</em></h2></p>
 <br>
 <p>
-<h3>You have a <strong>large</strong> amount of data.</h3><h3>The data must be made <strong>public</strong>.</h3><h3>Should be human readable but <strong>computer-unfriendly</strong>.</h3><h3>Your actions should be <strong>hidden</strong> to a casual user.</h3></p>
+<h3>You have a <strong>large</strong> amount of data</h3><h3>The data must be made <strong>public</strong></h3><h3>Should be human readable but <strong>computer-unfriendly</strong></h3><h3>Your actions should be <strong>hidden</strong> to a casual user</h3></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
@@ -160,6 +163,14 @@ slide explaining the levels...</p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
+<p>
+<h3>Table of Contents</h3></p>
+<br>
+<p>
+<h4><a href="#Hack1">Disable right-click</a></h4><h4><a href="#Hack2">Minification</a></h4><h4><a href="#Hack3">Authentication</a></h4><h4><a href="#Hack4">Data Limits</a></h4><h4><a href="#Hack5">Rendering to Images/PDF</a></h4><h4><a href="#Hack6">JavaScript page links</a></h4><h4><a href="#Hack7">Watermarking & Honeypots</a></h4><h4><a href="#Hack8">Remove markup metadata</a></h4><h4><a href="#Hack9">IP limits</a></h4><h4><a href="#Hack10">HTML obfuscation</a></h4><h4><a href="#Hack11">Random naming conventions for page elements</a></h4><h4><a href="#Hack12">Font remapping</a></h4></p>
+</section>
+</section><section class="vertical-stack">
+<section id="Hack1"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #1:</h2><h2>Disable right-click</h2>implementation <strong>EASY</strong> : defense <strong>TRIVIAL</strong> : hack-level <strong>AMATEUR</strong></p>
 <br>
@@ -172,12 +183,9 @@ function disableclick(event) {
      return false;    
 } }
 &lt;/script&gt;</code></pre>
-<br>
-<p>
-I hope you hate accessibility!</p>
 </section><section   class="vertical-slide">
 <p>
-<h2>WHITE HAT #1: Disable right-click</h2></p>
+<div class="whitehat"><h2>WHITE HAT #1: Disable right-click</h2></p>
 <br>
 <p>
 <h3>Open developers console (F12), search for <code>disableclick</code> and remove.</h3></p>
@@ -186,10 +194,10 @@ I hope you hate accessibility!</p>
 <h3>Turn of javascript.</h3></p>
 <br>
 <p>
-<h3>Use any headless browser.</h3></p>
+<h3>Use a headless (or mobile) browser.</h3></div></p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack2"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #2: Minification</h2>implementation <strong>EASY</strong> : defense <strong>TRIVIAL</strong> : hack-level <strong>AMATEUR</strong></p>
 <br>
@@ -208,9 +216,9 @@ Online tools: <a href="http://unminify.com/">Unminify</a>, <a href="">JS Beautif
 $ js-beautify file.js</code></pre>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack3"  class="vertical-slide">
 <p>
-<h2>BLACK HAT #3: Cookies/OAuth2</h2>implementation <strong>EASY</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>NEW HIRE</strong></p>
+<h2>BLACK HAT #3:</h2>implementation <strong>EASY</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>NEW HIRE</strong></p>
 <br>
 <p>
 <h4>not RESTful?</h4>Implement vistor control via <code>$SESSONS</code>. Give every new visitor to the site a unique ID that you control and limit access with. Bonus, restrict user-agent.</p>
@@ -219,7 +227,7 @@ $ js-beautify file.js</code></pre>
 <h4>REST API?</h4>Require all meaningful data requests to go through OAuth2, cumbersome for new-comers and direct control over the data distribution.</p>
 </section><section   class="vertical-slide">
 <p>
-<h2>WHITE HAT #3: Cookies/OAuth2</h2></p>
+<h2>WHITE HAT #3: Authentication</h2></p>
 <br>
 <p>
 Create session ID's with headless browsers<br><em>and</em><br>simulate user-agents</p>
@@ -228,12 +236,12 @@ Create session ID's with headless browsers<br><em>and</em><br>simulate user-agen
 Poorly designed session states (that don't clear and hold<br>large internal variables) can DoS your server!</p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack4"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #4:</h2><h2>Data limits & time delays</h2>implementation <strong>MEDIUM</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>ENTRY-LEVEL</strong></p>
 <br>
 <p>
-Detection: high download rates or unusual traffic within a given timespan; all traffic from a single client or IP address.</p>
+Detection: high download rates or unusual traffic within a given timespan;<br>all traffic from a single client or IP address.</p>
 <br>
 <p>
 Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<br>Return HTTP 301, 40x or 50x errors (<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">full list</a>)</p>
@@ -242,7 +250,7 @@ Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<
 <h2>WHITE HAT #4:</h2><h2>Data limits & time delays</h2>Frequently change your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a>.<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack5"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #5:</h2><h2>Rendering to images / PDF</h2>implementation <strong>NON TRIVAL</strong> : defense <strong>PRETTY GOOD</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
 <br>
@@ -259,25 +267,30 @@ Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<
 Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> PDF -> OCR (manual)<br><em>or</em><br>Python: <a href="https://github.com/tmbdev/ocropy">OCRopus</a><br><em>or</em><br><a href="https://github.com/tesseract-ocr/tesseract">Tesseract Open Source OCR Engine</a></p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack6"  class="vertical-slide">
 <p>
-<h2>BLACK HAT #6:</h2><h2>JavaScript page links</h2>implementation <strong>STANDARD</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>JUNIOR-LEVEL</strong><br>Infinite pagnation/scroll. Ex. <a href="https://dribbble.com/">Dribble</a></p>
-<br>
-<p>
-Forces the user to simulate AJAX (stops headless browsers).<br>Combine with user sessions and data limits!</p>
-<br>
+<h2>BLACK HAT #6: JavaScript page links</h2>implementation <strong>STANDARD</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>JUNIOR-LEVEL</strong><br>Infinite pagnation/scroll. Ex. <a href="https://dribbble.com/">Dribble</a></p>
 <figure>
     <a href="images/infinite_scroll.gif">
     <img class="" src="images/infinite_scroll.gif" height="300px">
     </a>
-    <figcaption>Image from <a href="https://visualhierarchy.co/blog/wp-content/uploads/2015/09/infinite_scroll.gif">visualhierarchy</a></figcaption>
+    
     </figure>
-</section><section  data-background="images/infinite-hate.gif" class="vertical-slide">
-<p>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><font color="black"><br><a href="http://videolectures.net/chi08_kieras_phc/">Psychology in Human-Computer Interaction</a> by David Kieras<br>shows this frustrates the user with lack of control.</p>
 <br>
 <p>
-Image from <a href="https://dribbble.com/shots/2152555-I-Hate-Infinite-Scroll">Per Vestman@Dribble</a><br></font></p>
+Forces the user to simulate AJAX (stops headless browsers).<br><em>Combine with user sessions and data limits!</em></p>
+<br>
+<p>
+<a href="http://videolectures.net/chi08_kieras_phc/">Psychology in Human-Computer Interaction</a> by David Kieras<br>shows this frustrates the user with lack of control.</p>
+<br>
+<p>
+<div class="reference_footnote">Image from <a href="https://visualhierarchy.co/blog/wp-content/uploads/2015/09/infinite_scroll.gif">visualhierarchy</a></div></p>
+</section><section  data-background="images/infinite-hate.gif" class="vertical-slide">
+<p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><font color="black"></p>
+<br>
+<p>
+<div class="reference_footnote">Image from <a href="https://dribbble.com/shots/2152555-I-Hate-Infinite-Scroll">Per Vestman@Dribble</a></div><br></font></p>
 </section><section   class="vertical-slide">
 <p>
 <h2>WHITE HAT #6:</h2><h2>JavaScript page links</h2></p>
@@ -289,18 +302,33 @@ Stateful browser can slowly pull the data like a real user.</p>
 SHOW EXAMPLE:</p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack7"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #7:</h2><h2>Watermarking & Honeypots</h2>implementation <strong>HARD</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>SECURITY ANALYST</strong></p>
 <br>
 <p>
-Poison the well! Leave fake data buried deep within the dataset!</p>
+<h4>Easy mode, simple IP protection</h4></p>
+<figure>
+    <a href="images/watermark_examples/shutterstock1.jpg">
+    <img class="" src="images/watermark_examples/shutterstock1.jpg" height="300">
+    </a>
+    <figcaption>Easy to remove.</figcaption>
+    </figure>
+<figure>
+    <a href="images/watermark_examples/shutterstock2.jpg">
+    <img class="" src="images/watermark_examples/shutterstock2.jpg" height="300">
+    </a>
+    <figcaption>Requires time to remove, not automated.</figcaption>
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+<h2>BLACK HAT #7:</h2><h2>Watermarking & Honeypots</h2></p>
 <br>
 <p>
-Data should be identifiable and track the user IP.</p>
+<h4>Hard mode: Track users for ToS violations!</h4>Poison the well! Leave fake data buried deep within the dataset!<br>Data should be identifiable and track the user IP.</p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack8"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #8:</h2><h2>Remove markup metadata</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>MASOCHIST</strong></p>
 <br>
@@ -339,22 +367,22 @@ Piper Wright
 &lt;/div&gt;</code></pre>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack9"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #9: IP limits</h2>implementation <strong>EASY TO MESS UP</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>XXXX</strong></p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack10"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #10: HTML obfuscation</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>COMPU-JOCK</strong></p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack11"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #11: Random naming conventions for page elements</h2>implementation <strong>SANITY-REDUCING</strong> : defense <strong>EXECELLENT</strong> : hack-level <strong>CTHULHU</strong></p>
 </section>
 </section><section class="vertical-stack">
-<section   class="vertical-slide">
+<section id="Hack12"  class="vertical-slide">
 <p>
 <h2>BLACK HAT #12: Font remapping</h2>implementation <strong>WTF</strong> : defense <strong>RIDICULOUS</strong> : hack-level <strong>MITNICK</strong></p>
 </section>
