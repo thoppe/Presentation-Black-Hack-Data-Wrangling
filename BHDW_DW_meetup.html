@@ -169,7 +169,7 @@ slide explaining the levels...</p>
 <h3>Table of Contents</h3></p>
 <br>
 <p>
-<h4><a href="#Hack1">Disable right-click</a> [T, drafted]</h4><h4><a href="#Hack2">Minification</a> [R, drafted]</h4><h4><a href="#Hack3">Authentication</a> [T, drafted]</h4><h4><a href="#Hack4">Data Limits</a> [R, drafted]</h4><h4><a href="#Hack5">Rendering to Images</a> [R, drafted]</h4><h4><a href="#Hack6">JavaScript page links</a> [T, drafted]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted]</h4><h4><a href="#Hack8">Honeypots</a> [T]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T, drafted]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R]</h4><h4><a href="#Hack11">Serving as PDF</a> [R]</h4><h4><a href="#Hack12">Font remapping</a> [T]</h4></p>
+<h4><a href="#Hack1">Disable right-click</a> [T, drafted]</h4><h4><a href="#Hack2">Minification</a> [R, drafted]</h4><h4><a href="#Hack3">Authentication</a> [T, drafted]</h4><h4><a href="#Hack4">Data Limits</a> [R, drafted]</h4><h4><a href="#Hack5">Rendering to Images</a> [R, drafted]</h4><h4><a href="#Hack6">JavaScript page links</a> [T, drafted]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T, drafted]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T, drafted]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R]</h4><h4><a href="#Hack11">Serving as PDF</a> [R]</h4><h4><a href="#Hack12">Font remapping</a> [T]</h4></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack1"  class="vertical-slide">
@@ -329,10 +329,96 @@ Can watermark non images too! SHOW EXAMPLE.</p>
 </section><section class="vertical-stack">
 <section id="Hack8"  class="vertical-slide">
 <p>
-<h2><code>BlackHat8</code>: Honeypots</h2>implementation <strong>XXX</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>XXX</strong></p>
+<h2><code>BlackHat8</code>: Honeypots & Stenography</h2>implementation <strong>NON TRIVIAL</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>COVERT-OPS</strong><br>Steganography: embed data to identify and track IP/credentials.</p>
 <br>
 <p>
-<h4>Hard mode: Track users for ToS violations!</h4>Poison the well! Leave fake data buried deep within the dataset!<br>Data should be identifiable and track the user IP.</p>
+A legal strong-arm strategy, freely give data but track its distribution.</p>
+<br>
+<p>
+Useful to determine ToS violations!</p>
+<br>
+<p>
+Poison the well! Leave fake data buried deep within the dataset!</p>
+</section><section   class="vertical-slide">
+<p>
+<h3>Image stenography</h3>Hide data in the EXIF header (obvious place, easy to remove), <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a></p>
+<figure>
+    <a href="images/honeypot_examples/panda.jpg">
+    <img class="" src="images/honeypot_examples/panda.jpg" >
+    </a>
+    <figcaption><a href="https://flic.kr/p/9eopJm">Kevin Dooley, Flickr</a></figcaption>
+    </figure>
+<br>
+<pre><code class=python>$ identify -verbose panda.jpg 
+
+ Image: panda.jpg
+  Format: JPEG (Joint Photographic Experts Group JFIF format)
+  ...
+  Properties:
+    date:create: 2016-01-10T11:58:10-05:00
+    exif:ApertureValue: 327680/65536
+    exif:ColorSpace: 1
+    exif:DateTime: 2009:08:01 08:59:44
+    exif:DateTimeOriginal: 2009:07:24 04:17:22
+   ...</code></pre>
+</section><section   class="vertical-slide">
+<p>
+<h3>Image stenography</h3>Map post-filter md5sum to user data (not resistant to image changes).<br>Impossible for user to know what is being stored!</p>
+<br>
+<pre><code class=python>import numpy as np
+from scipy.ndimage import imread
+from scipy.misc import imsave
+
+jpg = imread(&quot;panda.jpg&quot;)
+idx = np.random.uniform(size=jpg.shape) &lt; 0.001
+jpg[idx] += np.random.uniform(-2,2, size=idx.sum()).astype(np.uint8)
+jpg[jpg&lt;0] = 0
+jpg[jpg&gt;255] = 255
+imsave(&quot;panda_new.jpg&quot;, jpg)
+# Test on command line
+# $ md5sum *.jpg
+# bd1a44ba2111eb675e78935d4d5cc186  panda.jpg
+# 672c6dbf03828ea50a70bc81e19bfd69  panda_new.jpg</code></pre>
+<br>
+<figure>
+    <a href="images/honeypot_examples/panda.jpg">
+    <img class="" src="images/honeypot_examples/panda.jpg" >
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/honeypot_examples/panda_new.jpg">
+    <img class="" src="images/honeypot_examples/panda_new.jpg" >
+    </a>
+    
+    </figure>
+</section><section   class="vertical-slide">
+<p>
+<h3>General stenography</h3></p>
+<br>
+<p>
+Works for any lossy format (mp3, gif, etc...)<br>For tabular data, hide identification in NULL fields that can be easily removed.<br>Perturb date-times by seconds in data records and save the offset.</p>
+<br>
+<p>
+<h3>Honeypots</h3></p>
+<br>
+<p>
+If a bot or persistant downloader is idenified, feed them faulty data... ex.<br>Continually degrade image quality sent as function of DL's<br>Remove rows, or return records not found with increasing frequency.</p>
+</section><section   class="vertical-slide">
+<p>
+<h2><code>WhiteHat9</code>: Honeypots & Stenography</h2></p>
+<br>
+<p>
+Download data multiple times from different sources.</p>
+<br>
+<p>
+Run <code>diff</code> commands to suss out data that changes by IP and user.</p>
+<br>
+<p>
+Sanitize data by rejecting fields and entries that change with alternative DLs.</p>
+<br>
+<p>
+Modify image to remove stenography (apply same trick twice!)</p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack9"  class="vertical-slide">

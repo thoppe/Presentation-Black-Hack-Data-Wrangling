@@ -9,7 +9,7 @@
 #### [Rendering to Images](#Hack5) [R, drafted]
 #### [JavaScript page links](#Hack6) [T, drafted]
 #### [Watermarking](#Hack7) [R, partially drafted]
-#### [Honeypots](#Hack8) [T]
+#### [Honeypots & Stenography](#Hack8) [T, drafted]
 #### [Remove markup metadata](#Hack9) [T, drafted]
 #### [HTML obfuscation](#Hack10) [R]
 #### [Serving as PDF](#Hack11) [R]
@@ -171,12 +171,79 @@ implementation *EASY* : defense *ROBUST* : hack-level *SCRIPT-KIDDIE*
 Can watermark non images too! SHOW EXAMPLE.
 
 ==== [Hack8]
-## `BlackHat8`: Honeypots
-implementation *XXX* : defense *SUBTLE* : hack-level *XXX*
+## `BlackHat8`: Honeypots & Stenography
+implementation *NON TRIVIAL* : defense *SUBTLE* : hack-level *COVERT-OPS*
+Steganography: embed data to identify and track IP/credentials.
 
-#### Hard mode: Track users for ToS violations!
+A legal strong-arm strategy, freely give data but track its distribution.
+
+Useful to determine ToS violations!
+
 Poison the well! Leave fake data buried deep within the dataset!
-Data should be identifiable and track the user IP.
+====*
+### Image stenography
+Hide data in the EXIF header (obvious place, easy to remove), [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/)
+!(images/honeypot_examples/panda.jpg) [Kevin Dooley, Flickr](https://flic.kr/p/9eopJm)
+
+    $ identify -verbose panda.jpg 
+    
+     Image: panda.jpg
+      Format: JPEG (Joint Photographic Experts Group JFIF format)
+      ...
+      Properties:
+        date:create: 2016-01-10T11:58:10-05:00
+        exif:ApertureValue: 327680/65536
+        exif:ColorSpace: 1
+        exif:DateTime: 2009:08:01 08:59:44
+        exif:DateTimeOriginal: 2009:07:24 04:17:22
+       ...
+
+====*
+### Image stenography
+Map post-filter md5sum to user data (not resistant to image changes).
+Impossible for user to know what is being stored! 
+
+    import numpy as np
+    from scipy.ndimage import imread
+    from scipy.misc import imsave
+    
+    jpg = imread("panda.jpg")
+    idx = np.random.uniform(size=jpg.shape) < 0.001
+    jpg[idx] += np.random.uniform(-2,2, size=idx.sum()).astype(np.uint8)
+    jpg[jpg<0] = 0
+    jpg[jpg>255] = 255
+    imsave("panda_new.jpg", jpg)
+    # Test on command line
+    # $ md5sum *.jpg
+    # bd1a44ba2111eb675e78935d4d5cc186  panda.jpg
+    # 672c6dbf03828ea50a70bc81e19bfd69  panda_new.jpg
+
+!(images/honeypot_examples/panda.jpg) 
+!(images/honeypot_examples/panda_new.jpg)
+====*
+### General stenography
+
+Works for any lossy format (mp3, gif, etc...)
+For tabular data, hide identification in NULL fields that can be easily removed.
+Perturb date-times by seconds in data records and save the offset.
+
+### Honeypots
+
+If a bot or persistant downloader is idenified, feed them faulty data... ex.
+Continually degrade image quality sent as function of DL's
+Remove rows, or return records not found with increasing frequency.
+
+====*
+## `WhiteHat9`: Honeypots & Stenography
+
+Download data multiple times from different sources.
+
+Run `diff` commands to suss out data that changes by IP and user.
+
+Sanitize data by rejecting fields and entries that change with alternative DLs.
+
+Modify image to remove stenography (apply same trick twice!)
+
 
 ==== [Hack9]
 ## `BlackHat9`: Remove markup metadata
