@@ -11,7 +11,7 @@
 #### [Watermarking](#Hack7) [R, partially drafted]
 #### [Honeypots & Stenography](#Hack8) [T, drafted]
 #### [Remove markup metadata](#Hack9) [T, drafted]
-#### [HTML obfuscation](#Hack10) [R]
+#### [HTML obfuscation](#Hack10) [R, drafted]
 #### [Serving as PDF](#Hack11) [R]
 #### [Font remapping](#Hack12) [T]
 
@@ -119,7 +119,7 @@ Draw text onto an HTML5 canvas using [JavaScript](http://jsfiddle.net/JUWrV/) / 
 
 ====*
 
-## `WhiteHat5`: Rending to images
+## `WhiteHat5`: Rendering to images
 
 Server or desktop-based OCR software
 _or_
@@ -284,6 +284,36 @@ Remove markup. You can't rip what you can't see.
 ==== [Hack10]
 ## `BlackHat10`: HTML obfuscation
 implementation *EASY* : defense *SANITY-REDUCING* : hack-level *SCRIPT-KIDDIE*
+
+Encode everything with HTML character codes and insert random benign HTML.
+
+Start with this:
+
+    This is a string of text
+
+Encode to this:
+
+    &#84;&#104;&#105;&#115;&#32;&#105;&#115;&#32;&#97;<u></u>&#32;&#115;<i></i>&#116;&#114;&#105;<u></u>&#110;&#103;<i></i>&#32;<u></u>&#111;&#102;&#32;&#116;&#101;&#120;&#116;
+
+'View Source' shows this:
+    <p>
+    &#84;&#104;&#105;&#115;&#32;&#112;&#97;&#103;&#101;&#32;&#105;&#115;<i></i>&#32;<u></u>&#109;&#101;&#97;&#110;<b></b>
+
+
+
+====*
+## `WhiteHat10`: HTML obfuscation
+
+Use the [Selenium Web Driver](http://www.seleniumhq.org/projects/webdriver/)
+* Create a headless web browser
+* Open the page
+* Use OCR to extract the text
+
+_or_
+
+* Capture the entire page (curl, etc.)
+* Decode the HTML characters using [BeautifulSoup4](http://www.crummy.com/software/BeautifulSoup/)
+
 
 ==== [Hack11]
 ## `BlackHat11`: Serving as PDF 
