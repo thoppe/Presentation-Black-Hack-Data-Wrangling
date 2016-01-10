@@ -82,4 +82,4 @@ slide explaining the levels...
 # Thanks you!
 
 Got any more Black Hat Hacks? Let us know!
-[@metasemantic](https://twitter.com/metasemantic) / [@rdempsey](https://twitter.com/rdempsey)
+##### `#blackhatdata` / [@metasemantic](https://twitter.com/metasemantic) / [@rdempsey](https://twitter.com/rdempsey)

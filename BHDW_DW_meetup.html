@@ -169,7 +169,7 @@ slide explaining the levels...</p>
 <h3>Table of Contents</h3></p>
 <br>
 <p>
-<h4><a href="#Hack1">Disable right-click</a></h4><h4><a href="#Hack2">Minification</a></h4><h4><a href="#Hack3">Authentication</a></h4><h4><a href="#Hack4">Data Limits</a></h4><h4><a href="#Hack5">Rendering to Images/PDF</a></h4><h4><a href="#Hack6">JavaScript page links</a></h4><h4><a href="#Hack7">Watermarking & Honeypots</a></h4><h4><a href="#Hack8">Remove markup metadata</a></h4><h4><a href="#Hack9">IP limits</a></h4><h4><a href="#Hack10">HTML obfuscation</a></h4><h4><a href="#Hack11">Random naming conventions for page elements</a></h4><h4><a href="#Hack12">Font remapping</a></h4></p>
+<h4><a href="#Hack1">Disable right-click</a> [T, drafted]</h4><h4><a href="#Hack2">Minification</a> [R, drafted]</h4><h4><a href="#Hack3">Authentication</a> [T, drafted]</h4><h4><a href="#Hack4">Data Limits</a> [R, drafted]</h4><h4><a href="#Hack5">Rendering to Images</a> [R, drafted]</h4><h4><a href="#Hack6">JavaScript page links</a> [T, drafted]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted]</h4><h4><a href="#Hack8">Honeypots</a> [T]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T, drafted]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R]</h4><h4><a href="#Hack11">Serving as PDF</a> [R]</h4><h4><a href="#Hack12">Font remapping</a> [T]</h4></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack1"  class="vertical-slide">
@@ -249,21 +249,21 @@ Detection: high download rates or unusual traffic within a given timespan;<br>al
 Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<br>Return HTTP 301, 40x or 50x errors (<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">full list</a>)</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat4</code>:</h2><h2>Data limits & time delays</h2>Frequently change your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a>.<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
+<h2><code>WhiteHat4</code>: Data & time limits</h2></p>
+<br>
+<p>
+Frequently change your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a>.<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack5"  class="vertical-slide">
 <p>
-<h2><code>BlackHat5</code>: Rendering & PDFs</h2>implementation <strong>NON TRIVAL</strong> : defense <strong>PRETTY GOOD</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
+<h2><code>BlackHat5</code>: Rendering to images</h2>implementation <strong>NON TRIVAL</strong> : defense <strong>PRETTY GOOD</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
 <br>
 <p>
 <h3>Text to Image</h3><a href="https://www.daftlogic.com/projects-text-to-image.htm">PHP Text to Image</a> / <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a><br><em>or</em><br>Draw text onto an HTML5 canvas using <a href="http://jsfiddle.net/JUWrV/">JavaScript</a> / use the HTML5 <a href="http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting">canvasElement.toDataURL</a> element</p>
-<br>
-<p>
-<h3>Text to PDF</h3><a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a> or <a href="http://pdfkit.org/">PDFKit</a> (node.js)</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat5</code>: Rending & PDFs</h2></p>
+<h2><code>WhiteHat5</code>: Rending to images</h2></p>
 <br>
 <p>
 Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> PDF -> OCR (manual)<br><em>or</em><br>Python: <a href="https://github.com/tmbdev/ocropy">OCRopus</a><br><em>or</em><br><a href="https://github.com/tesseract-ocr/tesseract">Tesseract Open Source OCR Engine</a></p>
@@ -306,7 +306,7 @@ SHOW EXAMPLE:</p>
 </section><section class="vertical-stack">
 <section id="Hack7"  class="vertical-slide">
 <p>
-<h2><code>BlackHat7</code>:</h2><h2>Watermarking & Honeypots</h2>implementation <strong>HARD</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>SECURITY ANALYST</strong></p>
+<h2><code>BlackHat7</code>: Watermarking</h2>implementation <strong>EASY</strong> : defense <strong>ROBUST</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
 <br>
 <p>
 <h4>Easy mode, simple IP protection</h4></p>
@@ -322,17 +322,22 @@ SHOW EXAMPLE:</p>
     </a>
     <figcaption>Requires time to remove, not automated.</figcaption>
     </figure>
-</section><section   class="vertical-slide">
+<br>
 <p>
-<h2><code>BlackHat7</code>:</h2><h2>Watermarking & Honeypots</h2></p>
+Can watermark non images too! SHOW EXAMPLE.</p>
+</section>
+</section><section class="vertical-stack">
+<section id="Hack8"  class="vertical-slide">
+<p>
+<h2><code>BlackHat8</code>: Honeypots</h2>implementation <strong>XXX</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>XXX</strong></p>
 <br>
 <p>
 <h4>Hard mode: Track users for ToS violations!</h4>Poison the well! Leave fake data buried deep within the dataset!<br>Data should be identifiable and track the user IP.</p>
 </section>
 </section><section class="vertical-stack">
-<section id="Hack8"  class="vertical-slide">
+<section id="Hack9"  class="vertical-slide">
 <p>
-<h2><code>BlackHat8</code>:</h2><h2>Remove markup metadata</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>MASOCHIST</strong></p>
+<h2><code>BlackHat9</code>: Remove markup metadata</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>MASOCHIST</strong></p>
 <br>
 <p>
 <h3>Two ways:</h3><h4>1. Break the standard UX design.</h4><h4>2. Remove proper HTML/CSS markup.</h4></p>
@@ -369,19 +374,17 @@ Piper Wright
 &lt;/div&gt;</code></pre>
 </section>
 </section><section class="vertical-stack">
-<section id="Hack9"  class="vertical-slide">
-<p>
-<h2><code>BlackHat9</code>: IP limits</h2>implementation <strong>EASY TO MESS UP</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>XXXX</strong></p>
-</section>
-</section><section class="vertical-stack">
 <section id="Hack10"  class="vertical-slide">
 <p>
-<h2><code>BlackHat10</code>: HTML obfuscation</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>COMPU-JOCK</strong></p>
+<h2><code>BlackHat10</code>: HTML obfuscation</h2>implementation <strong>EASY</strong> : defense <strong>SANITY-REDUCING</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack11"  class="vertical-slide">
 <p>
-<h2><code>BlackHat11</code>: Random naming conventions for page elements</h2>implementation <strong>SANITY-REDUCING</strong> : defense <strong>EXECELLENT</strong> : hack-level <strong>CTHULHU</strong></p>
+<h2><code>BlackHat11</code>: Serving as PDF</h2>implementation <strong>XXXX</strong> : defense <strong>EXECELLENT</strong> : hack-level <strong>XXXX</strong></p>
+<br>
+<p>
+<h3>Text to PDF</h3><a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a> or <a href="http://pdfkit.org/">PDFKit</a> (node.js)</p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack12"  class="vertical-slide">
@@ -394,7 +397,7 @@ Piper Wright
 <h1>Thanks you!</h1></p>
 <br>
 <p>
-Got any more Black Hat Hacks? Let us know!<br><a href="https://twitter.com/metasemantic">@metasemantic</a> / <a href="https://twitter.com/rdempsey">@rdempsey</a></p>
+Got any more Black Hat Hacks? Let us know!<h5><code>#blackhatdata</code> / <a href="https://twitter.com/metasemantic">@metasemantic</a> / <a href="https://twitter.com/rdempsey">@rdempsey</a></h5></p>
 </section>
 </section>
     </div></div>

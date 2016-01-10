@@ -2,19 +2,18 @@
 
 ### Table of Contents
 
-#### [Disable right-click](#Hack1)
-#### [Minification](#Hack2)
-#### [Authentication](#Hack3)
-#### [Data Limits](#Hack4)
-#### [Rendering to Images/PDF](#Hack5)
-#### [JavaScript page links](#Hack6)
-#### [Watermarking & Honeypots](#Hack7)
-#### [Remove markup metadata](#Hack8)
-#### [IP limits](#Hack9)
-#### [HTML obfuscation](#Hack10)
-#### [Random naming conventions for page elements](#Hack11)
-#### [Font remapping](#Hack12)
-
+#### [Disable right-click](#Hack1) [T, drafted]
+#### [Minification](#Hack2) [R, drafted]
+#### [Authentication](#Hack3) [T, drafted]
+#### [Data Limits](#Hack4) [R, drafted]
+#### [Rendering to Images](#Hack5) [R, drafted]
+#### [JavaScript page links](#Hack6) [T, drafted]
+#### [Watermarking](#Hack7) [R, partially drafted]
+#### [Honeypots](#Hack8) [T]
+#### [Remove markup metadata](#Hack9) [T, drafted]
+#### [HTML obfuscation](#Hack10) [R]
+#### [Serving as PDF](#Hack11) [R]
+#### [Font remapping](#Hack12) [T]
 
 ==== [Hack1]
 
@@ -97,11 +96,12 @@ Rate limit individual IP addresses or a specific id.
 Delay content delivery.
 Return HTTP 301, 40x or 50x errors ([full list](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html))
 
+% Mention story about IP blocking from WIKIPEDIA
 
 ====*
 
-## `WhiteHat4`:
-## Data limits & time delays
+## `WhiteHat4`: Data & time limits
+
 Frequently change your IP address using [VPN/proxy services](http://robertwdempsey.com/hma) or [TOR](https://www.torproject.org/).
 _and_
 Slow down your scraper: Scrapy [autothrottle](http://doc.scrapy.org/en/latest/topics/autothrottle.html), custom timing code
@@ -109,7 +109,7 @@ _and_
 Change your user agent: Scrapy [random user agent](https://github.com/cnu/scrapy-random-useragent), [custom Python code](http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen)
 
 ==== [Hack5]
-## `BlackHat5`: Rendering & PDFs
+## `BlackHat5`: Rendering to images
 implementation *NON TRIVAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
 
 ###Text to Image
@@ -117,12 +117,9 @@ implementation *NON TRIVAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
 _or_
 Draw text onto an HTML5 canvas using [JavaScript](http://jsfiddle.net/JUWrV/) / use the HTML5 [canvasElement.toDataURL](http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting) element
 
-###Text to PDF
-[PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) or [PDFKit](http://pdfkit.org/)  (node.js)
-
 ====*
 
-## `WhiteHat5`: Rending & PDFs
+## `WhiteHat5`: Rending to images
 
 Server or desktop-based OCR software
 _or_
@@ -164,25 +161,25 @@ Stateful browser can slowly pull the data like a real user.
 SHOW EXAMPLE:
 
 ==== [Hack7]
-## `BlackHat7`:
-## Watermarking & Honeypots
-implementation *HARD* : defense *SUBTLE* : hack-level *SECURITY ANALYST*
+## `BlackHat7`: Watermarking
+implementation *EASY* : defense *ROBUST* : hack-level *SCRIPT-KIDDIE*
 
 #### Easy mode, simple IP protection
 !(images/watermark_examples/shutterstock1.jpg) <<height:300:px;transparent>> Easy to remove.
 !(images/watermark_examples/shutterstock2.jpg) <<height:300:px;transparent>> Requires time to remove, not automated.
-====*
-## `BlackHat7`:
-## Watermarking & Honeypots
+
+Can watermark non images too! SHOW EXAMPLE.
+
+==== [Hack8]
+## `BlackHat8`: Honeypots
+implementation *XXX* : defense *SUBTLE* : hack-level *XXX*
 
 #### Hard mode: Track users for ToS violations!
 Poison the well! Leave fake data buried deep within the dataset!
 Data should be identifiable and track the user IP.
 
-
-==== [Hack8]
-## `BlackHat8`:
-## Remove markup metadata
+==== [Hack9]
+## `BlackHat9`: Remove markup metadata
 implementation *XXXX* : defense *XXXX* : hack-level *MASOCHIST*
 
 ### Two ways:
@@ -217,19 +214,18 @@ Remove markup. You can't rip what you can't see.
     Piper Wright
     </div>
 
-==== [Hack9]
-## `BlackHat9`: IP limits
-implementation *EASY TO MESS UP* : defense *MEDIUM* : hack-level *XXXX*
-
 ==== [Hack10]
 ## `BlackHat10`: HTML obfuscation
-implementation *XXXX* : defense *XXXX* : hack-level *COMPU-JOCK*
+implementation *EASY* : defense *SANITY-REDUCING* : hack-level *SCRIPT-KIDDIE*
 
 ==== [Hack11]
-## `BlackHat11`: Random naming conventions for page elements 
-implementation *SANITY-REDUCING* : defense *EXECELLENT* : hack-level *CTHULHU*
+## `BlackHat11`: Serving as PDF 
+implementation *XXXX* : defense *EXECELLENT* : hack-level *XXXX*
+
+###Text to PDF
+[PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) or [PDFKit](http://pdfkit.org/)  (node.js)
+
 
 ==== [Hack12]
 ## `BlackHat12`: Font remapping
 implementation *WTF* : defense *RIDICULOUS* : hack-level *MITNICK*
-
