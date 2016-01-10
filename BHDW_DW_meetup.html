@@ -169,7 +169,7 @@ slide explaining the levels...</p>
 <h3>Table of Contents</h3></p>
 <br>
 <p>
-<h4><a href="#Hack1">Disable right-click</a> [T, drafted]</h4><h4><a href="#Hack2">Minification</a> [R, drafted]</h4><h4><a href="#Hack3">Authentication</a> [T, drafted]</h4><h4><a href="#Hack4">Data Limits</a> [R, drafted]</h4><h4><a href="#Hack5">Rendering to Images</a> [R, drafted]</h4><h4><a href="#Hack6">JavaScript page links</a> [T, drafted]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T, drafted]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T, drafted]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R]</h4><h4><a href="#Hack11">Serving as PDF</a> [R]</h4><h4><a href="#Hack12">Font remapping</a> [T]</h4></p>
+<h4><a href="#Hack1">Disable right-click</a> [T, drafted]</h4><h4><a href="#Hack2">Minification</a> [R, drafted]</h4><h4><a href="#Hack3">Authentication</a> [T, drafted]</h4><h4><a href="#Hack4">Data Limits</a> [R, drafted]</h4><h4><a href="#Hack5">Rendering to Images</a> [R, drafted]</h4><h4><a href="#Hack6">JavaScript page links</a> [T, drafted]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T, drafted]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T, drafted]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R, drafted]</h4><h4><a href="#Hack11">Serving HTML as PDF</a> [R, drafted]</h4><h4><a href="#Hack12">Font remapping</a> [T]</h4></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack1"  class="vertical-slide">
@@ -263,7 +263,7 @@ Frequently change your IP address using <a href="http://robertwdempsey.com/hma">
 <h3>Text to Image</h3><a href="https://www.daftlogic.com/projects-text-to-image.htm">PHP Text to Image</a> / <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a><br><em>or</em><br>Draw text onto an HTML5 canvas using <a href="http://jsfiddle.net/JUWrV/">JavaScript</a> / use the HTML5 <a href="http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting">canvasElement.toDataURL</a> element</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat5</code>: Rending to images</h2></p>
+<h2><code>WhiteHat5</code>: Rendering to images</h2></p>
 <br>
 <p>
 Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> PDF -> OCR (manual)<br><em>or</em><br>Python: <a href="https://github.com/tmbdev/ocropy">OCRopus</a><br><em>or</em><br><a href="https://github.com/tesseract-ocr/tesseract">Tesseract Open Source OCR Engine</a></p>
@@ -463,14 +463,51 @@ Piper Wright
 <section id="Hack10"  class="vertical-slide">
 <p>
 <h2><code>BlackHat10</code>: HTML obfuscation</h2>implementation <strong>EASY</strong> : defense <strong>SANITY-REDUCING</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
+<br>
+<p>
+Encode everything with HTML character codes and insert random benign HTML.</p>
+<br>
+<p>
+Start with this:</p>
+<pre><code class=python>This is a string of text</code></pre>
+<br>
+<p>
+Encode to this:</p>
+<pre><code class=python>&amp;#84;&amp;#104;&amp;#105;&amp;#115;&amp;#32;&amp;#105;&amp;#115;&amp;#32;&amp;#97;&lt;u&gt;&lt;/u&gt;&amp;#32;&amp;#115;&lt;i&gt;&lt;/i&gt;&amp;#116;&amp;#114;&amp;#105;&lt;u&gt;&lt;/u&gt;&amp;#110;&amp;#103;&lt;i&gt;&lt;/i&gt;&amp;#32;&lt;u&gt;&lt;/u&gt;&amp;#111;&amp;#102;&amp;#32;&amp;#116;&amp;#101;&amp;#120;&amp;#116;</code></pre>
+<br>
+<p>
+'View Source' shows this:</p>
+<pre><code class=python>&lt;p&gt;
+&amp;#84;&amp;#104;&amp;#105;&amp;#115;&amp;#32;&amp;#112;&amp;#97;&amp;#103;&amp;#101;&amp;#32;&amp;#105;&amp;#115;&lt;i&gt;&lt;/i&gt;&amp;#32;&lt;u&gt;&lt;/u&gt;&amp;#109;&amp;#101;&amp;#97;&amp;#110;&lt;b&gt;&lt;/b&gt;</code></pre>
+</section><section   class="vertical-slide">
+<p>
+<h2><code>WhiteHat10</code>: HTML obfuscation</h2></p>
+<br>
+<p>
+Use the <a href="http://www.seleniumhq.org/projects/webdriver/">Selenium Web Driver</a></p>
+<br>
+<ol><li>1. Create a headless web browser</li>
+<li>2. Open the page</li>
+<li>3. Take a screenshot of the page</li>
+<li>4. Use OCR to extract the text from the screenshot</li></ol>
+<p>
+<em>or</em></p>
+<ol><li>1. Capture the entire page (curl, etc.)</li>
+<li>2. Decode the HTML characters using <a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup4</a></li></ol>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack11"  class="vertical-slide">
 <p>
-<h2><code>BlackHat11</code>: Serving as PDF</h2>implementation <strong>XXXX</strong> : defense <strong>EXECELLENT</strong> : hack-level <strong>XXXX</strong></p>
+<h2><code>BlackHat11</code>: Serving HTML as PDF</h2>implementation <strong>STANDARD</strong> : defense <strong>SANITY-REDUCING</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
 <br>
 <p>
-<h3>Text to PDF</h3><a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a> or <a href="http://pdfkit.org/">PDFKit</a> (node.js)</p>
+<h3>Convert all Text to PDF</h3>Use <a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a> or <a href="http://pdfkit.org/">PDFKit</a> (node.js)</p>
+</section><section   class="vertical-slide">
+<p>
+<h2><code>WhiteHat11</code>: Serving HTML as PDF</h2></p>
+<br>
+<p>
+Use OCR to extract text and images from the text<br><em>or</em><br><a href="http://tabula.technology/">Tabula</a> to extract tabular data</p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack12"  class="vertical-slide">

@@ -12,7 +12,7 @@
 #### [Honeypots & Stenography](#Hack8) [T, drafted]
 #### [Remove markup metadata](#Hack9) [T, drafted]
 #### [HTML obfuscation](#Hack10) [R, drafted]
-#### [Serving as PDF](#Hack11) [R]
+#### [Serving HTML as PDF](#Hack11) [R, drafted]
 #### [Font remapping](#Hack12) [T]
 
 ==== [Hack1]
@@ -288,11 +288,9 @@ implementation *EASY* : defense *SANITY-REDUCING* : hack-level *SCRIPT-KIDDIE*
 Encode everything with HTML character codes and insert random benign HTML.
 
 Start with this:
-
     This is a string of text
 
 Encode to this:
-
     &#84;&#104;&#105;&#115;&#32;&#105;&#115;&#32;&#97;<u></u>&#32;&#115;<i></i>&#116;&#114;&#105;<u></u>&#110;&#103;<i></i>&#32;<u></u>&#111;&#102;&#32;&#116;&#101;&#120;&#116;
 
 'View Source' shows this:
@@ -305,22 +303,29 @@ Encode to this:
 ## `WhiteHat10`: HTML obfuscation
 
 Use the [Selenium Web Driver](http://www.seleniumhq.org/projects/webdriver/)
-* Create a headless web browser
-* Open the page
-* Use OCR to extract the text
 
+1. 1. Create a headless web browser
+2. 2. Open the page
+3. 3. Take a screenshot of the page
+4. 4. Use OCR to extract the text from the screenshot
 _or_
-
-* Capture the entire page (curl, etc.)
-* Decode the HTML characters using [BeautifulSoup4](http://www.crummy.com/software/BeautifulSoup/)
+1. 1. Capture the entire page (curl, etc.)
+2. 2. Decode the HTML characters using [BeautifulSoup4](http://www.crummy.com/software/BeautifulSoup/)
 
 
 ==== [Hack11]
-## `BlackHat11`: Serving as PDF 
-implementation *XXXX* : defense *EXECELLENT* : hack-level *XXXX*
+## `BlackHat11`: Serving HTML as PDF 
+implementation *STANDARD* : defense *SANITY-REDUCING* : hack-level *JUNIOR-LEVEL*
 
-###Text to PDF
-[PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) or [PDFKit](http://pdfkit.org/)  (node.js)
+###Convert all Text to PDF
+Use [PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) or [PDFKit](http://pdfkit.org/) (node.js)
+
+====*
+## `WhiteHat11`: Serving HTML as PDF
+
+Use OCR to extract text and images from the text
+_or_
+[Tabula](http://tabula.technology/) to extract tabular data
 
 
 ==== [Hack12]
