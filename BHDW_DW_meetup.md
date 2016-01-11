@@ -46,7 +46,7 @@ Working hard to make your data as *inaccessible* as possible.
 
 What kind of data?
 
-_Corporate finance / Political Dontations / Regulations /_
+_Corporate finance / Political Donations / Regulations /_
 _ Anti-FOIA / Digital Marketer / ..._
 
 ====*

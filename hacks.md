@@ -13,7 +13,7 @@
 #### [Remove markup metadata](#Hack9) [T, drafted]
 #### [HTML obfuscation](#Hack10) [R, drafted]
 #### [Serving HTML as PDF](#Hack11) [R, drafted]
-#### [Font remapping](#Hack12) [T]
+#### [Text remapping](#Hack12) [T]
 
 ==== [Hack1]
 
@@ -70,7 +70,7 @@ Automate it: [JS Beautifier](https://github.com/beautify-web/js-beautify)
 implementation *EASY* : defense *MEDIUM* : hack-level *NEW HIRE*
 
 #### not RESTful?
-Implement vistor control via `$SESSONS`. Give every new visitor to the site a unique ID that you control and limit access with. Bonus, restrict user-agent.
+Implement visitor control via `$SESSIONS`. Give every new visitor to the site a unique ID that you control and limit access with. Bonus, restrict user-agent.
 
 #### REST API?
 Require all meaningful data requests to go through OAuth2, cumbersome for new-comers and direct control over the data distribution.
@@ -110,7 +110,7 @@ Change your user agent: Scrapy [random user agent](https://github.com/cnu/scrapy
 
 ==== [Hack5]
 ## `BlackHat5`: Rendering to images
-implementation *NON TRIVAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
+implementation *NON TRIVIAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
 
 ###Text to Image
 [PHP Text to Image](https://www.daftlogic.com/projects-text-to-image.htm) / [ImageMagick](http://www.imagemagick.org/script/index.php)
@@ -133,7 +133,7 @@ _or_
 ==== [Hack6]
 ## `BlackHat6`: JavaScript page links
 implementation *STANDARD* : defense *MEDIUM* : hack-level *JUNIOR-LEVEL*
-Infinite pagnation/scroll. Ex. [Dribble](https://dribbble.com/) 
+Infinite pagination/scroll. Ex. [Dribble](https://dribbble.com/) 
 !(images/infinite_scroll.gif) <<height:300px>> 
 
 Forces the user to simulate AJAX (stops headless browsers).
@@ -173,7 +173,7 @@ Can watermark non images too! SHOW EXAMPLE.
 ==== [Hack8]
 ## `BlackHat8`: Honeypots & Stenography
 implementation *NON TRIVIAL* : defense *SUBTLE* : hack-level *COVERT-OPS*
-Steganography: embed data to identify and track IP/credentials.
+Stenography: embed data to identify and track IP/credentials.
 
 A legal strong-arm strategy, freely give data but track its distribution.
 
@@ -229,7 +229,7 @@ Perturb date-times by seconds in data records and save the offset.
 
 ### Honeypots
 
-If a bot or persistant downloader is idenified, feed them faulty data... ex.
+If a bot or persistent downloader is identified, feed them faulty data... ex.
 Continually degrade image quality sent as function of DL's
 Remove rows, or return records not found with increasing frequency.
 
@@ -329,5 +329,67 @@ _or_
 
 
 ==== [Hack12]
-## `BlackHat12`: Font remapping
+## `BlackHat12`: Text remapping
 implementation *WTF* : defense *RIDICULOUS* : hack-level *MITNICK*
+
+Alter text from visual display:
+
+3 levels
+### Javascript
+### Hidden spans
+### Custom fonts
+
+
+====*
+
+### Javascript text manipulation
+
+Alter the text as it is copied. JSfiddle [example](http://jsfiddle.net/jp6nhmxf/)
+
+    function addLink() {
+        //Get the selected text and append the extra info
+        var selection = window.getSelection(),
+            pagelink = '<br /><br /> Read more at: ' + document.location.href,
+            copytext = selection + pagelink,
+            newdiv = document.createElement('div');
+    
+        //hide the newly created container
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+    
+        //insert the container, fill it with the extended text, and define the new selection
+        document.body.appendChild(newdiv);
+        newdiv.innerHTML = copytext;
+        selection.selectAllChildren(newdiv);
+    
+        window.setTimeout(function () {
+            document.body.removeChild(newdiv);
+        }, 100);
+    }
+    document.addEventListener('copy', addLink);
+
+====*
+
+### Hidden spans
+
+simple text below right?
+## <p class="codeblock">T<span style="position: absolute; left: -5000px; top: -5000px">gCRT3Qg3</span>R<span style="position: absolute; left: -5000px; top: -5000px">T7SQNdsF</span>A<span style="position: absolute; left: -5000px; top: -5000px">TBsh8T3T</span>V<span style="position: absolute; left: -5000px; top: -5000px">WKaKeTMg</span>I<span style="position: absolute; left: -5000px; top: -5000px">ayRwzhur</span>S<span style="position: absolute; left: -5000px; top: -5000px">tNVKkXZV</span></p>
+====+
+copy and paste transforms 
+`TRAVIS` to `TgCRT3Qg3RT7SQNdsFATBsh8T3TVWKaKeTMgIayRwzhurS`
+     <p class="codeblock">
+       T
+       <span style="position: absolute; left: -100px; top: -100px">gCRT3Qg3</span>
+       R
+       <span style="position: absolute; left: -100px; top: -100px">T7SQNdsF</span>
+       A
+       <span style="position: absolute; left: -100px; top: -100px">TBsh8T3T</span>
+       V
+       <span style="position: absolute; left: -100px; top: -100px">WKaKeTMg</span>
+       I
+       <span style="position: absolute; left: -100px; top: -100px">ayRwzhur</span>
+       S
+       <span style="position: absolute; left: -100px; top: -100px">tNVKkXZV</span>
+     </p>
+
+Any data payload can be inserted here (e.g. copyright claims, point of origin, etc...)
