@@ -13,7 +13,7 @@
 #### [Remove markup metadata](#Hack9) [T, drafted]
 #### [HTML obfuscation](#Hack10) [R, drafted]
 #### [Serving HTML as PDF](#Hack11) [R, drafted]
-#### [Text remapping](#Hack12) [T]
+#### [Text remapping](#Hack12) [T, drafted]
 
 ==== [Hack1]
 
@@ -334,15 +334,12 @@ implementation *WTF* : defense *RIDICULOUS* : hack-level *MITNICK*
 
 Alter text from visual display:
 
-3 levels
 ### Javascript
 ### Hidden spans
-### Custom fonts
-
+### Font remapping
 
 ====*
-
-### Javascript text manipulation
+## Javascript text manipulation
 
 Alter the text as it is copied. JSfiddle [example](http://jsfiddle.net/jp6nhmxf/)
 
@@ -369,8 +366,7 @@ Alter the text as it is copied. JSfiddle [example](http://jsfiddle.net/jp6nhmxf/
     document.addEventListener('copy', addLink);
 
 ====*
-
-### Hidden spans
+## Hidden spans
 
 simple text below right?
 ## <p class="codeblock">T<span style="position: absolute; left: -5000px; top: -5000px">gCRT3Qg3</span>R<span style="position: absolute; left: -5000px; top: -5000px">T7SQNdsF</span>A<span style="position: absolute; left: -5000px; top: -5000px">TBsh8T3T</span>V<span style="position: absolute; left: -5000px; top: -5000px">WKaKeTMg</span>I<span style="position: absolute; left: -5000px; top: -5000px">ayRwzhur</span>S<span style="position: absolute; left: -5000px; top: -5000px">tNVKkXZV</span></p>
@@ -393,3 +389,18 @@ copy and paste transforms
      </p>
 
 Any data payload can be inserted here (e.g. copyright claims, point of origin, etc...)
+====*
+## Font remapping
+
+Render document to PDF and remap fonts _per document_ for protected data.
+### Example: [font_remapping.pdf](images/font_remapping.pdf)
+
+WTH? How does it work?
+> A PDF is a collection of symbols drawn on a page. Draw `c` here, draw `a` there, etc. A PDF reader only knows what a letter is because it maps to a specific character code in the font. Simply create a new font that lies about its mapping.
+
+Multiple fonts can be used to improve the "encryption" process, 
+one font per character gives a one-time pad! 
+
+
+
+

@@ -169,7 +169,7 @@ slide explaining the levels...</p>
 <h3>Table of Contents</h3></p>
 <br>
 <p>
-<h4><a href="#Hack1">Disable right-click</a> [T, drafted]</h4><h4><a href="#Hack2">Minification</a> [R, drafted]</h4><h4><a href="#Hack3">Authentication</a> [T, drafted]</h4><h4><a href="#Hack4">Data Limits</a> [R, drafted]</h4><h4><a href="#Hack5">Rendering to Images</a> [R, drafted]</h4><h4><a href="#Hack6">JavaScript page links</a> [T, drafted]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T, drafted]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T, drafted]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R, drafted]</h4><h4><a href="#Hack11">Serving HTML as PDF</a> [R, drafted]</h4><h4><a href="#Hack12">Text remapping</a> [T]</h4></p>
+<h4><a href="#Hack1">Disable right-click</a> [T, drafted]</h4><h4><a href="#Hack2">Minification</a> [R, drafted]</h4><h4><a href="#Hack3">Authentication</a> [T, drafted]</h4><h4><a href="#Hack4">Data Limits</a> [R, drafted]</h4><h4><a href="#Hack5">Rendering to Images</a> [R, drafted]</h4><h4><a href="#Hack6">JavaScript page links</a> [T, drafted]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T, drafted]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T, drafted]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R, drafted]</h4><h4><a href="#Hack11">Serving HTML as PDF</a> [R, drafted]</h4><h4><a href="#Hack12">Text remapping</a> [T, drafted]</h4></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack1"  class="vertical-slide">
@@ -518,10 +518,10 @@ Use OCR to extract text and images from the text<br><em>or</em><br><a href="http
 Alter text from visual display:</p>
 <br>
 <p>
-3 levels<h3>Javascript</h3><h3>Hidden spans</h3><h3>Custom fonts</h3></p>
+<h3>Javascript</h3><h3>Hidden spans</h3><h3>Font remapping</h3></p>
 </section><section   class="vertical-slide">
 <p>
-<h3>Javascript text manipulation</h3></p>
+<h2>Javascript text manipulation</h2></p>
 <br>
 <p>
 Alter the text as it is copied. JSfiddle <a href="http://jsfiddle.net/jp6nhmxf/">example</a></p>
@@ -549,7 +549,7 @@ Alter the text as it is copied. JSfiddle <a href="http://jsfiddle.net/jp6nhmxf/"
 document.addEventListener('copy', addLink);</code></pre>
 </section><section   class="vertical-slide">
 <p>
-<h3>Hidden spans</h3></p>
+<h2>Hidden spans</h2></p>
 <br>
 <p>
 simple text below right?<h2><p class="codeblock">T<span style="position: absolute; left: -5000px; top: -5000px">gCRT3Qg3</span>R<span style="position: absolute; left: -5000px; top: -5000px">T7SQNdsF</span>A<span style="position: absolute; left: -5000px; top: -5000px">TBsh8T3T</span>V<span style="position: absolute; left: -5000px; top: -5000px">WKaKeTMg</span>I<span style="position: absolute; left: -5000px; top: -5000px">ayRwzhur</span>S<span style="position: absolute; left: -5000px; top: -5000px">tNVKkXZV</span></p></h2><div class="fragment">copy and paste transforms<br><code>TRAVIS</code> to <code>TgCRT3Qg3RT7SQNdsFATBsh8T3TVWKaKeTMgIayRwzhurS</code></p>
@@ -570,6 +570,19 @@ simple text below right?<h2><p class="codeblock">T<span style="position: absolut
 <br>
 <p>
 Any data payload can be inserted here (e.g. copyright claims, point of origin, etc...)<br></div></p>
+</section><section   class="vertical-slide">
+<p>
+<h2>Font remapping</h2></p>
+<br>
+<p>
+Render document to PDF and remap fonts <em>per document</em> for protected data.<h3>Example: <a href="images/font_remapping.pdf">font_remapping.pdf</a></h3></p>
+<br>
+<p>
+WTH? How does it work?</p>
+<blockquote>A PDF is a collection of symbols drawn on a page. Draw `c` here, draw `a` there, etc. A PDF reader only knows what a letter is because it maps to a specific character code in the font. Simply create a new font that lies about its mapping.</blockquote>
+<br>
+<p>
+Multiple fonts can be used to improve the "encryption" process,<br>one font per character gives a one-time pad!</p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
