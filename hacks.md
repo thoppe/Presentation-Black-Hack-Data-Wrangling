@@ -2,18 +2,18 @@
 
 ### Table of Contents
 
-#### [Disable right-click](#Hack1) [T, drafted]
-#### [Minification](#Hack2) [R, drafted]
-#### [Authentication](#Hack3) [T, drafted]
-#### [Data Limits](#Hack4) [R, drafted]
-#### [Rendering to Images](#Hack5) [R, drafted]
-#### [JavaScript page links](#Hack6) [T, drafted]
-#### [Watermarking](#Hack7) [R, partially drafted]
-#### [Honeypots & Stenography](#Hack8) [T, drafted]
-#### [Remove markup metadata](#Hack9) [T, drafted]
-#### [HTML obfuscation](#Hack10) [R, drafted]
-#### [Serving HTML as PDF](#Hack11) [R, drafted]
-#### [Text remapping](#Hack12) [T, drafted]
+#### [Disable right-click](#Hack1) [T]
+#### [Minification](#Hack2) [R]
+#### [Authentication](#Hack3) [T]
+#### [Data Limits](#Hack4) [R]
+#### [Rendering to Images](#Hack5) [R]
+#### [JavaScript page links](#Hack6) [T]
+#### [Watermarking](#Hack7) [R, partially drafted, missing WH]
+#### [Honeypots & Stenography](#Hack8) [T, missing WH]
+#### [Remove markup metadata](#Hack9) [T]
+#### [HTML obfuscation](#Hack10) [R]
+#### [Serving HTML as PDF](#Hack11) [R]
+#### [Text remapping](#Hack12) [T, missing WH]
 
 ==== [Hack1]
 
@@ -326,6 +326,9 @@ Use [PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) o
 Use OCR to extract text and images from the text
 _or_
 [Tabula](http://tabula.technology/) to extract tabular data
+
+Throw money and humans at it:
+[Mechanial Turk](https://www.mturk.com/mturk/welcome)
 
 
 ==== [Hack12]
