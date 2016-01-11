@@ -161,7 +161,16 @@ What kind of data?</p>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-slide explaining the levels...</p>
+<h3>Presentation format</h3><h5>Hack quantification</h5></p>
+<br>
+<p>
+implementation : <strong>EASY</strong> : <strong>MEDIUM</strong> : <strong>HARD</strong> : <strong>WTF</strong></p>
+<br>
+<p>
+defense : <strong>WEAK</strong> : <strong>REASONABLE</strong> : <strong>STRONG</strong> : <strong>RIDICULOUS</strong></p>
+<br>
+<p>
+hack-level : <strong>SCRIPT-KIDDIE</strong> : <strong>CORPORATE</strong> : <strong>HOLLYWOOD</strong></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
@@ -169,12 +178,12 @@ slide explaining the levels...</p>
 <h3>Table of Contents</h3></p>
 <br>
 <p>
-<h4><a href="#Hack1">Disable right-click</a> [T]</h4><h4><a href="#Hack2">Minification</a> [R]</h4><h4><a href="#Hack3">Authentication</a> [T]</h4><h4><a href="#Hack4">Data Limits</a> [R]</h4><h4><a href="#Hack5">Rendering to Images</a> [R]</h4><h4><a href="#Hack6">JavaScript page links</a> [T]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted, missing WH]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T, missing WH]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R]</h4><h4><a href="#Hack11">Serving HTML as PDF</a> [R]</h4><h4><a href="#Hack12">Text remapping</a> [T, missing WH]</h4></p>
+<h4><a href="#Hack1">Disable right-click</a> [T]</h4><h4><a href="#Hack2">Minification</a> [R]</h4><h4><a href="#Hack3">Authentication</a> [T]</h4><h4><a href="#Hack4">Data Limits</a> [R]</h4><h4><a href="#Hack5">Rendering to Images</a> [R]</h4><h4><a href="#Hack6">JavaScript page links</a> [T]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted, missing WH]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R]</h4><h4><a href="#Hack11">Serving HTML as PDF</a> [R]</h4><h4><a href="#Hack12">Text remapping</a> [T, missing WH]</h4></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack1"  class="vertical-slide">
 <p>
-<h2><code>BlackHat1</code>: Disable right-click</h2>implementation <strong>EASY</strong> : defense <strong>TRIVIAL</strong> : hack-level <strong>AMATEUR</strong></p>
+<h2><code>BlackHat1</code>: Disable right-click</h2>implementation <strong>EASY</strong> : defense <strong>WEAK</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
 <br>
 <pre><code class=python>&lt;script language=&quot;javascript&quot;&gt;
 document.onmousedown=disableclick;
@@ -185,6 +194,9 @@ function disableclick(event) {
      return false;    
 } }
 &lt;/script&gt;</code></pre>
+<br>
+<p>
+Also in this category, CSS overlays.</p>
 </section><section   class="vertical-slide">
 <p>
 <div class="whitehat"><h2><code>WhiteHat1</code>: Disable right-click</h2></p>
@@ -201,7 +213,7 @@ function disableclick(event) {
 </section><section class="vertical-stack">
 <section id="Hack2"  class="vertical-slide">
 <p>
-<h2><code>BlackHat2</code>: Minification</h2>implementation <strong>EASY</strong> : defense <strong>TRIVIAL</strong> : hack-level <strong>AMATEUR</strong></p>
+<h2><code>BlackHat2</code>: Minification</h2>implementation <strong>EASY</strong> : defense <strong>WEAK</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
 <br>
 <p>
 <a href="https://github.com/kangax/html-minifier">Kangax HTML Minifier</a>: removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.</p>
@@ -220,7 +232,7 @@ $ js-beautify file.js</code></pre>
 </section><section class="vertical-stack">
 <section id="Hack3"  class="vertical-slide">
 <p>
-<h2><code>BlackHat3</code>: Authentication</h2>implementation <strong>EASY</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>NEW HIRE</strong></p>
+<h2><code>BlackHat3</code>: Authentication</h2>implementation <strong>MEDIUM</strong> : defense <strong>REASONABLE</strong> : hack-level <strong>CORPORATE</strong></p>
 <br>
 <p>
 <h4>not RESTful?</h4>Implement visitor control via <code>$SESSIONS</code>. Give every new visitor to the site a unique ID that you control and limit access with. Bonus, restrict user-agent.</p>
@@ -240,7 +252,7 @@ Poorly designed session states (that don't clear and hold<br>large internal vari
 </section><section class="vertical-stack">
 <section id="Hack4"  class="vertical-slide">
 <p>
-<h2><code>BlackHat4:</code> Data & time limits</h2>implementation <strong>MEDIUM</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>ENTRY-LEVEL</strong></p>
+<h2><code>BlackHat4:</code> Data & time limits</h2>implementation <strong>MEDIUM</strong> : defense <strong>REASONABLE</strong> : hack-level <strong>CORPORATE</strong></p>
 <br>
 <p>
 Detection: high download rates or unusual traffic within a given timespan;<br>all traffic from a single client or IP address.</p>
@@ -257,7 +269,7 @@ Frequently change your IP address using <a href="http://robertwdempsey.com/hma">
 </section><section class="vertical-stack">
 <section id="Hack5"  class="vertical-slide">
 <p>
-<h2><code>BlackHat5</code>: Rendering to images</h2>implementation <strong>NON TRIVIAL</strong> : defense <strong>PRETTY GOOD</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
+<h2><code>BlackHat5</code>: Rendering to images</h2>implementation <strong>MEDIUM</strong> : defense <strong>STRONG</strong> : hack-level <strong>CORPORATE</strong></p>
 <br>
 <p>
 <h3>Text to Image</h3><a href="https://www.daftlogic.com/projects-text-to-image.htm">PHP Text to Image</a> / <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a><br><em>or</em><br>Draw text onto an HTML5 canvas using <a href="http://jsfiddle.net/JUWrV/">JavaScript</a> / use the HTML5 <a href="http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting">canvasElement.toDataURL</a> element</p>
@@ -271,7 +283,7 @@ Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> P
 </section><section class="vertical-stack">
 <section id="Hack6"  class="vertical-slide">
 <p>
-<h2><code>BlackHat6</code>: JavaScript page links</h2>implementation <strong>STANDARD</strong> : defense <strong>MEDIUM</strong> : hack-level <strong>JUNIOR-LEVEL</strong><br>Infinite pagination/scroll. Ex. <a href="https://dribbble.com/">Dribble</a></p>
+<h2><code>BlackHat6</code>: JavaScript page links</h2>implementation <strong>MEDIUM</strong> : defense <strong>REASONABLE</strong> : hack-level <strong>CORPORATE</strong><br>Infinite pagination/scroll. Ex. <a href="https://dribbble.com/">Dribble</a></p>
 <figure>
     <a href="images/infinite_scroll.gif">
     <img class="" src="images/infinite_scroll.gif" height="300px">
@@ -306,7 +318,7 @@ SHOW EXAMPLE:</p>
 </section><section class="vertical-stack">
 <section id="Hack7"  class="vertical-slide">
 <p>
-<h2><code>BlackHat7</code>: Watermarking</h2>implementation <strong>EASY</strong> : defense <strong>ROBUST</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
+<h2><code>BlackHat7</code>: Watermarking</h2>implementation <strong>EASY</strong> : defense <strong>STRONG</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
 <br>
 <p>
 <h4>Easy mode, simple IP protection</h4></p>
@@ -329,7 +341,7 @@ Can watermark non images too! SHOW EXAMPLE.</p>
 </section><section class="vertical-stack">
 <section id="Hack8"  class="vertical-slide">
 <p>
-<h2><code>BlackHat8</code>: Honeypots & Stenography</h2>implementation <strong>NON TRIVIAL</strong> : defense <strong>SUBTLE</strong> : hack-level <strong>COVERT-OPS</strong><br>Stenography: embed data to identify and track IP/credentials.</p>
+<h2><code>BlackHat8</code>: Honeypots & Stenography</h2>implementation <strong>HARD</strong> : defense <strong>RIDICULOUS</strong> : hack-level <strong>HOLLYWOOD</strong><br>Stenography: embed data to identify and track IP/credentials.</p>
 <br>
 <p>
 A legal strong-arm strategy, freely give data but track its distribution.</p>
@@ -406,7 +418,7 @@ Works for any lossy format (mp3, gif, etc...)<br>For tabular data, hide identifi
 If a bot or persistent downloader is identified, feed them faulty data... ex.<br>Continually degrade image quality sent as function of DL's<br>Remove rows, or return records not found with increasing frequency.</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat9</code>: Honeypots & Stenography</h2></p>
+<h2><code>WhiteHat8</code>: Honeypots & Stenography</h2></p>
 <br>
 <p>
 Download data multiple times from different sources.</p>
@@ -423,7 +435,7 @@ Modify image to remove stenography (apply same trick twice!)</p>
 </section><section class="vertical-stack">
 <section id="Hack9"  class="vertical-slide">
 <p>
-<h2><code>BlackHat9</code>: Remove markup metadata</h2>implementation <strong>XXXX</strong> : defense <strong>XXXX</strong> : hack-level <strong>MASOCHIST</strong></p>
+<h2><code>BlackHat9</code>: Remove markup metadata</h2>implementation <strong>HARD</strong> : defense <strong>REASONABLE</strong> : hack-level <strong>CORPORATE</strong></p>
 <br>
 <p>
 <h3>Two ways:</h3><h4>1. Break the standard UX design.</h4><h4>2. Remove proper HTML/CSS markup.</h4></p>
@@ -462,7 +474,7 @@ Piper Wright
 </section><section class="vertical-stack">
 <section id="Hack10"  class="vertical-slide">
 <p>
-<h2><code>BlackHat10</code>: HTML obfuscation</h2>implementation <strong>EASY</strong> : defense <strong>SANITY-REDUCING</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
+<h2><code>BlackHat10</code>: HTML obfuscation</h2>implementation <strong>EASY</strong> : defense <strong>STRONG</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
 <br>
 <p>
 Encode everything with HTML character codes and insert random benign HTML.</p>
@@ -498,7 +510,7 @@ Use the <a href="http://www.seleniumhq.org/projects/webdriver/">Selenium Web Dri
 </section><section class="vertical-stack">
 <section id="Hack11"  class="vertical-slide">
 <p>
-<h2><code>BlackHat11</code>: Serving HTML as PDF</h2>implementation <strong>STANDARD</strong> : defense <strong>SANITY-REDUCING</strong> : hack-level <strong>JUNIOR-LEVEL</strong></p>
+<h2><code>BlackHat11</code>: Serving HTML as PDF</h2>implementation <strong>HARD</strong> : defense <strong>STRONG</strong> : hack-level <strong>CORPORATE</strong></p>
 <br>
 <p>
 <h3>Convert all Text to PDF</h3>Use <a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a> or <a href="http://pdfkit.org/">PDFKit</a> (node.js)</p>
@@ -515,7 +527,7 @@ Throw money and humans at it:<br><a href="https://www.mturk.com/mturk/welcome">M
 </section><section class="vertical-stack">
 <section id="Hack12"  class="vertical-slide">
 <p>
-<h2><code>BlackHat12</code>: Text remapping</h2>implementation <strong>WTF</strong> : defense <strong>RIDICULOUS</strong> : hack-level <strong>MITNICK</strong></p>
+<h2><code>BlackHat12</code>: Text remapping</h2>implementation <strong>WTF</strong> : defense <strong>RIDICULOUS</strong> : hack-level <strong>HOLLYWOOD</strong></p>
 <br>
 <p>
 Alter text from visual display:</p>

@@ -71,7 +71,15 @@ _ Anti-FOIA / Digital Marketer / ..._
 % https://imgflip.com/memegenerator/17089817/Dr-evil-quote
 ====
 
-slide explaining the levels...
+### Presentation format
+##### Hack quantification
+
+implementation : *EASY* : *MEDIUM* : *HARD* : *WTF*
+
+defense : *WEAK* : *REASONABLE* : *STRONG* : *RIDICULOUS*
+
+hack-level : *SCRIPT-KIDDIE* : *CORPORATE* : *HOLLYWOOD*
+
 
 % I moved all the hacks here so we have a nice split between
 % the intro and the content.

@@ -9,7 +9,7 @@
 #### [Rendering to Images](#Hack5) [R]
 #### [JavaScript page links](#Hack6) [T]
 #### [Watermarking](#Hack7) [R, partially drafted, missing WH]
-#### [Honeypots & Stenography](#Hack8) [T, missing WH]
+#### [Honeypots & Stenography](#Hack8) [T]
 #### [Remove markup metadata](#Hack9) [T]
 #### [HTML obfuscation](#Hack10) [R]
 #### [Serving HTML as PDF](#Hack11) [R]
@@ -18,7 +18,7 @@
 ==== [Hack1]
 
 ## `BlackHat1`:   Disable right-click
-implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
+implementation *EASY* : defense *WEAK* : hack-level *SCRIPT-KIDDIE*
 
     <script language="javascript">
     document.onmousedown=disableclick;
@@ -30,7 +30,7 @@ implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
     } }
     </script>
 
-% mention CSS overlays?
+Also in this category, CSS overlays.
 
 ====*
 <div class="whitehat">
@@ -45,7 +45,7 @@ implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
 
 ==== [Hack2]
 ## `BlackHat2`: Minification
-implementation *EASY* : defense *TRIVIAL* : hack-level *AMATEUR*
+implementation *EASY* : defense *WEAK* : hack-level *SCRIPT-KIDDIE*
 
 [Kangax HTML Minifier](https://github.com/kangax/html-minifier): removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.
 
@@ -67,7 +67,7 @@ Automate it: [JS Beautifier](https://github.com/beautify-web/js-beautify)
 
 ==== [Hack3]
 ## `BlackHat3`: Authentication
-implementation *EASY* : defense *MEDIUM* : hack-level *NEW HIRE*
+implementation *MEDIUM* : defense *REASONABLE* : hack-level *CORPORATE*
 
 #### not RESTful?
 Implement visitor control via `$SESSIONS`. Give every new visitor to the site a unique ID that you control and limit access with. Bonus, restrict user-agent.
@@ -87,7 +87,7 @@ large internal variables) can DoS your server!
 
 ==== [Hack4]
 ## `BlackHat4:` Data & time limits
-implementation *MEDIUM* : defense *MEDIUM* : hack-level *ENTRY-LEVEL*
+implementation *MEDIUM* : defense *REASONABLE* : hack-level *CORPORATE*
 
 Detection: high download rates or unusual traffic within a given timespan; 
 all traffic from a single client or IP address.
@@ -110,7 +110,7 @@ Change your user agent: Scrapy [random user agent](https://github.com/cnu/scrapy
 
 ==== [Hack5]
 ## `BlackHat5`: Rendering to images
-implementation *NON TRIVIAL* : defense *PRETTY GOOD* : hack-level *JUNIOR-LEVEL*
+implementation *MEDIUM* : defense *STRONG* : hack-level *CORPORATE*
 
 ###Text to Image
 [PHP Text to Image](https://www.daftlogic.com/projects-text-to-image.htm) / [ImageMagick](http://www.imagemagick.org/script/index.php)
@@ -132,7 +132,7 @@ _or_
 
 ==== [Hack6]
 ## `BlackHat6`: JavaScript page links
-implementation *STANDARD* : defense *MEDIUM* : hack-level *JUNIOR-LEVEL*
+implementation *MEDIUM* : defense *REASONABLE* : hack-level *CORPORATE*
 Infinite pagination/scroll. Ex. [Dribble](https://dribbble.com/) 
 !(images/infinite_scroll.gif) <<height:300px>> 
 
@@ -162,7 +162,7 @@ SHOW EXAMPLE:
 
 ==== [Hack7]
 ## `BlackHat7`: Watermarking
-implementation *EASY* : defense *ROBUST* : hack-level *SCRIPT-KIDDIE*
+implementation *EASY* : defense *STRONG* : hack-level *SCRIPT-KIDDIE*
 
 #### Easy mode, simple IP protection
 !(images/watermark_examples/shutterstock1.jpg) <<height:300:px;transparent>> Easy to remove.
@@ -172,7 +172,7 @@ Can watermark non images too! SHOW EXAMPLE.
 
 ==== [Hack8]
 ## `BlackHat8`: Honeypots & Stenography
-implementation *NON TRIVIAL* : defense *SUBTLE* : hack-level *COVERT-OPS*
+implementation *HARD* : defense *RIDICULOUS* : hack-level *HOLLYWOOD*
 Stenography: embed data to identify and track IP/credentials.
 
 A legal strong-arm strategy, freely give data but track its distribution.
@@ -234,7 +234,7 @@ Continually degrade image quality sent as function of DL's
 Remove rows, or return records not found with increasing frequency.
 
 ====*
-## `WhiteHat9`: Honeypots & Stenography
+## `WhiteHat8`: Honeypots & Stenography
 
 Download data multiple times from different sources.
 
@@ -247,7 +247,7 @@ Modify image to remove stenography (apply same trick twice!)
 
 ==== [Hack9]
 ## `BlackHat9`: Remove markup metadata
-implementation *XXXX* : defense *XXXX* : hack-level *MASOCHIST*
+implementation *HARD* : defense *REASONABLE* : hack-level *CORPORATE*
 
 ### Two ways:
 #### 1. Break the standard UX design.
@@ -283,7 +283,7 @@ Remove markup. You can't rip what you can't see.
 
 ==== [Hack10]
 ## `BlackHat10`: HTML obfuscation
-implementation *EASY* : defense *SANITY-REDUCING* : hack-level *SCRIPT-KIDDIE*
+implementation *EASY* : defense *STRONG* : hack-level *SCRIPT-KIDDIE*
 
 Encode everything with HTML character codes and insert random benign HTML.
 
@@ -315,7 +315,7 @@ _or_
 
 ==== [Hack11]
 ## `BlackHat11`: Serving HTML as PDF 
-implementation *STANDARD* : defense *SANITY-REDUCING* : hack-level *JUNIOR-LEVEL*
+implementation *HARD* : defense *STRONG* : hack-level *CORPORATE*
 
 ###Convert all Text to PDF
 Use [PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) or [PDFKit](http://pdfkit.org/) (node.js)
@@ -333,7 +333,7 @@ Throw money and humans at it:
 
 ==== [Hack12]
 ## `BlackHat12`: Text remapping
-implementation *WTF* : defense *RIDICULOUS* : hack-level *MITNICK*
+implementation *WTF* : defense *RIDICULOUS* : hack-level *HOLLYWOOD*
 
 Alter text from visual display:
 
