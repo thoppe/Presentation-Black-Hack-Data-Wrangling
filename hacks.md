@@ -8,7 +8,7 @@
 #### [Data limits](#Hack4) [R]
 #### [Rendering to images](#Hack5) [R]
 #### [JavaScript page links](#Hack6) [T]
-#### [Watermarking](#Hack7) [R, partially drafted, missing WH]
+#### [Watermarking](#Hack7) [R]
 #### [Honeypots & Stenography](#Hack8) [T]
 #### [Remove markup metadata](#Hack9) [T]
 #### [HTML obfuscation](#Hack10) [R]
@@ -195,14 +195,32 @@ implementation *EASY* : defense *STRONG* : hack-level *SCRIPT-KIDDIE*
 !(images/watermark_examples/shutterstock1.jpg) <<height:300:px;transparent>> Easy to remove.
 !(images/watermark_examples/shutterstock2.jpg) <<height:300:px;transparent>> Requires time to remove, not automated.
 
-Can watermark non images too! SHOW EXAMPLE.
+Can watermark non images too!
 
 ====*
 <div class="whitehat">
 ## `WhiteHat7`: Watermarking
 </div>
 
-ADD CONTENT!
+*Simple removal*
+Crop the picture in any photo editor
+_or_
+Use the restoration function in [Inpaint](http://www.theinpaint.com/): $20
+
+*More complex removal*
+"Content Aware Fill" in Photoshop
+
+====*
+
+*Cropping*
+!(images/watermark_examples/remove-text-photoshop-label.jpg) <<height:300:px;transparent>>
+!(images/watermark_examples/remove-text-photoshop-label-crop.jpg) <<height:300:px;transparent>>
+
+*Content Aware Fill in Photoshop*
+!(images/watermark_examples/remove-watermark-photoshop-cross-overlay.jpg) <<height:300:px;transparent>>
+!(images/watermark_examples/remove-watermark-photoshop-cross-overlay-filled.jpg) <<height:300:px;transparent>>
+
+
   
 ==== [Hack8]
 ## `BlackHat8`: Honeypots & Stenography
