@@ -34,14 +34,14 @@ Also in this category, CSS overlays.
 
 ====*
 <div class="whitehat">
-## `WhiteHat1`: Disable right-click
+## `WhiteHat1`: Disable right-click </div>
 
 ###  Open developers console (F12), search for `disableclick` and remove.
 
 ### Turn of javascript.
 
 ### Use a headless (or mobile) browser.
-</div>
+
 
 ==== [Hack2]
 ## `BlackHat2`: Minification
@@ -53,8 +53,8 @@ Ruby wrapper: [html_minifier](https://github.com/stereobooster/html_minifier)
 
 
 ====*
-
-## `WhiteHat2`: Minification
+<div class="whitehat">
+## `WhiteHat2`: Minification </div>
 De-minify the HTML using freely available tools.
 
 Online tools: [Unminify](http://unminify.com/), [JS Beautifier]()
@@ -76,7 +76,8 @@ Implement visitor control via `$SESSIONS`. Give every new visitor to the site a 
 Require all meaningful data requests to go through OAuth2, cumbersome for new-comers and direct control over the data distribution.
 
 ====*
-## `WhiteHat3`: Authentication
+<div class="whitehat">
+## `WhiteHat3`: Authentication </div>
 
 Create session ID's with headless browsers
 _and_
@@ -99,8 +100,8 @@ Return HTTP 301, 40x or 50x errors ([full list](http://www.w3.org/Protocols/rfc2
 % Mention story about IP blocking from WIKIPEDIA
 
 ====*
-
-## `WhiteHat4`: Data & time limits
+<div class="whitehat">
+## `WhiteHat4`: Data & time limits </div>
 
 Frequently change your IP address using [VPN/proxy services](http://robertwdempsey.com/hma) or [TOR](https://www.torproject.org/).
 _and_
@@ -118,8 +119,8 @@ _or_
 Draw text onto an HTML5 canvas using [JavaScript](http://jsfiddle.net/JUWrV/) / use the HTML5 [canvasElement.toDataURL](http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting) element
 
 ====*
-
-## `WhiteHat5`: Rendering to images
+<div class="whitehat">
+## `WhiteHat5`: Rendering to images </div>
 
 Server or desktop-based OCR software
 _or_
@@ -153,8 +154,8 @@ shows this frustrates the user with lack of control.
 </font>
 
 ====*
-
-## `WhiteHat6`: JavaScript page links
+<div class="whitehat">
+## `WhiteHat6`: JavaScript page links </div>
 
 Stateful browser can slowly pull the data like a real user.
 
@@ -170,6 +171,13 @@ implementation *EASY* : defense *STRONG* : hack-level *SCRIPT-KIDDIE*
 
 Can watermark non images too! SHOW EXAMPLE.
 
+====*
+<div class="whitehat">
+## `WhiteHat7`: Watermarking
+</div>
+
+ADD CONTENT!
+  
 ==== [Hack8]
 ## `BlackHat8`: Honeypots & Stenography
 implementation *HARD* : defense *RIDICULOUS* : hack-level *HOLLYWOOD*
@@ -234,7 +242,8 @@ Continually degrade image quality sent as function of DL's
 Remove rows, or return records not found with increasing frequency.
 
 ====*
-## `WhiteHat8`: Honeypots & Stenography
+<div class="whitehat">
+## `WhiteHat8`: Honeypots & Stenography </div>
 
 Download data multiple times from different sources.
 
@@ -281,6 +290,10 @@ Remove markup. You can't rip what you can't see.
     Piper Wright
     </div>
 
+====*
+<div class="whitehat">
+## `WhiteHat10`: Remove markup</div>
+
 ==== [Hack10]
 ## `BlackHat10`: HTML obfuscation
 implementation *EASY* : defense *STRONG* : hack-level *SCRIPT-KIDDIE*
@@ -300,7 +313,8 @@ Encode to this:
 
 
 ====*
-## `WhiteHat10`: HTML obfuscation
+<div class="whitehat"> 
+## `WhiteHat10`: HTML obfuscation </div>
 
 Use the [Selenium Web Driver](http://www.seleniumhq.org/projects/webdriver/)
 
@@ -321,7 +335,8 @@ implementation *HARD* : defense *STRONG* : hack-level *CORPORATE*
 Use [PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) or [PDFKit](http://pdfkit.org/) (node.js)
 
 ====*
-## `WhiteHat11`: Serving HTML as PDF
+<div class="whitehat">  
+## `WhiteHat11`: Serving HTML as PDF </div>
 
 Use OCR to extract text and images from the text
 _or_
@@ -404,6 +419,8 @@ WTH? How does it work?
 Multiple fonts can be used to improve the "encryption" process, 
 one font per character gives a one-time pad! 
 
-
+====*
+<div class="whitehat">
+## `WhiteHat12`: Text remapping </div>
 
 

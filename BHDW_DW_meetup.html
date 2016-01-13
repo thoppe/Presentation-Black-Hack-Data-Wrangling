@@ -199,7 +199,7 @@ function disableclick(event) {
 Also in this category, CSS overlays.</p>
 </section><section   class="vertical-slide">
 <p>
-<div class="whitehat"><h2><code>WhiteHat1</code>: Disable right-click</h2></p>
+<div class="whitehat"><h2><code>WhiteHat1</code>: Disable right-click </div></h2></p>
 <br>
 <p>
 <h3>Open developers console (F12), search for <code>disableclick</code> and remove.</h3></p>
@@ -208,7 +208,7 @@ Also in this category, CSS overlays.</p>
 <h3>Turn of javascript.</h3></p>
 <br>
 <p>
-<h3>Use a headless (or mobile) browser.</h3></div></p>
+<h3>Use a headless (or mobile) browser.</h3></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack2"  class="vertical-slide">
@@ -222,7 +222,7 @@ Also in this category, CSS overlays.</p>
 Ruby wrapper: <a href="https://github.com/stereobooster/html_minifier">html_minifier</a></p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat2</code>: Minification</h2>De-minify the HTML using freely available tools.</p>
+<div class="whitehat"><h2><code>WhiteHat2</code>: Minification </div></h2>De-minify the HTML using freely available tools.</p>
 <br>
 <p>
 Online tools: <a href="http://unminify.com/">Unminify</a>, <a href="">JS Beautifier</a><br><em>or</em><br>Text editor: <a href="https://github.com/welovewordpress/SublimeHtmlTidy">HTML Tidy</a> (Sublime Text)<br><em>or</em><br>Automate it: <a href="https://github.com/beautify-web/js-beautify">JS Beautifier</a></p>
@@ -241,7 +241,7 @@ $ js-beautify file.js</code></pre>
 <h4>REST API?</h4>Require all meaningful data requests to go through OAuth2, cumbersome for new-comers and direct control over the data distribution.</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat3</code>: Authentication</h2></p>
+<div class="whitehat"><h2><code>WhiteHat3</code>: Authentication </div></h2></p>
 <br>
 <p>
 Create session ID's with headless browsers<br><em>and</em><br>simulate user-agents</p>
@@ -261,7 +261,7 @@ Detection: high download rates or unusual traffic within a given timespan;<br>al
 Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<br>Return HTTP 301, 40x or 50x errors (<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">full list</a>)</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat4</code>: Data & time limits</h2></p>
+<div class="whitehat"><h2><code>WhiteHat4</code>: Data & time limits </div></h2></p>
 <br>
 <p>
 Frequently change your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a>.<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
@@ -275,7 +275,7 @@ Frequently change your IP address using <a href="http://robertwdempsey.com/hma">
 <h3>Text to Image</h3><a href="https://www.daftlogic.com/projects-text-to-image.htm">PHP Text to Image</a> / <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a><br><em>or</em><br>Draw text onto an HTML5 canvas using <a href="http://jsfiddle.net/JUWrV/">JavaScript</a> / use the HTML5 <a href="http://stackoverflow.com/questions/27552969/convert-text-to-canvas-image-preserving-formatting">canvasElement.toDataURL</a> element</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat5</code>: Rendering to images</h2></p>
+<div class="whitehat"><h2><code>WhiteHat5</code>: Rendering to images </div></h2></p>
 <br>
 <p>
 Server or desktop-based OCR software<br><em>or</em><br>Adobe Acrobat: Image -> PDF -> OCR (manual)<br><em>or</em><br>Python: <a href="https://github.com/tmbdev/ocropy">OCRopus</a><br><em>or</em><br><a href="https://github.com/tesseract-ocr/tesseract">Tesseract Open Source OCR Engine</a></p>
@@ -307,7 +307,7 @@ Forces the user to simulate AJAX (stops headless browsers).<br><em>Combine with 
 <div class="reference_footnote">Image from <a href="https://dribbble.com/shots/2152555-I-Hate-Infinite-Scroll">Per Vestman@Dribble</a></div><br></font></p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat6</code>: JavaScript page links</h2></p>
+<div class="whitehat"><h2><code>WhiteHat6</code>: JavaScript page links </div></h2></p>
 <br>
 <p>
 Stateful browser can slowly pull the data like a real user.</p>
@@ -337,6 +337,12 @@ SHOW EXAMPLE:</p>
 <br>
 <p>
 Can watermark non images too! SHOW EXAMPLE.</p>
+</section><section   class="vertical-slide">
+<p>
+<div class="whitehat"><h2><code>WhiteHat7</code>: Watermarking</h2></div></p>
+<br>
+<p>
+ADD CONTENT!</p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack8"  class="vertical-slide">
@@ -418,7 +424,7 @@ Works for any lossy format (mp3, gif, etc...)<br>For tabular data, hide identifi
 If a bot or persistent downloader is identified, feed them faulty data... ex.<br>Continually degrade image quality sent as function of DL's<br>Remove rows, or return records not found with increasing frequency.</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat8</code>: Honeypots & Stenography</h2></p>
+<div class="whitehat"><h2><code>WhiteHat8</code>: Honeypots & Stenography </div></h2></p>
 <br>
 <p>
 Download data multiple times from different sources.</p>
@@ -470,6 +476,9 @@ Remove markup. You can't rip what you can't see.</p>
 Preston Garvey &lt;/br&gt;
 Piper Wright
 &lt;/div&gt;</code></pre>
+</section><section   class="vertical-slide">
+<p>
+<div class="whitehat"><h2><code>WhiteHat10</code>: Remove markup</div></h2></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack10"  class="vertical-slide">
@@ -493,7 +502,7 @@ Encode to this:</p>
 &amp;#84;&amp;#104;&amp;#105;&amp;#115;&amp;#32;&amp;#112;&amp;#97;&amp;#103;&amp;#101;&amp;#32;&amp;#105;&amp;#115;&lt;i&gt;&lt;/i&gt;&amp;#32;&lt;u&gt;&lt;/u&gt;&amp;#109;&amp;#101;&amp;#97;&amp;#110;&lt;b&gt;&lt;/b&gt;</code></pre>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat10</code>: HTML obfuscation</h2></p>
+<div class="whitehat"><h2><code>WhiteHat10</code>: HTML obfuscation </div></h2></p>
 <br>
 <p>
 Use the <a href="http://www.seleniumhq.org/projects/webdriver/">Selenium Web Driver</a></p>
@@ -516,7 +525,7 @@ Use the <a href="http://www.seleniumhq.org/projects/webdriver/">Selenium Web Dri
 <h3>Convert all Text to PDF</h3>Use <a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a> or <a href="http://pdfkit.org/">PDFKit</a> (node.js)</p>
 </section><section   class="vertical-slide">
 <p>
-<h2><code>WhiteHat11</code>: Serving HTML as PDF</h2></p>
+<div class="whitehat"><h2><code>WhiteHat11</code>: Serving HTML as PDF </div></h2></p>
 <br>
 <p>
 Use OCR to extract text and images from the text<br><em>or</em><br><a href="http://tabula.technology/">Tabula</a> to extract tabular data</p>
@@ -598,6 +607,9 @@ WTH? How does it work?</p>
 <br>
 <p>
 Multiple fonts can be used to improve the "encryption" process,<br>one font per character gives a one-time pad!</p>
+</section><section   class="vertical-slide">
+<p>
+<div class="whitehat"><h2><code>WhiteHat12</code>: Text remapping </div></h2></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
