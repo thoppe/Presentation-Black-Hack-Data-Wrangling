@@ -101,8 +101,8 @@ Create session ID's with headless browsers
 _and_
 simulate user-agents
 
-Poorly designed session states (that don't clear and hold
-large internal variables) can DoS your server!
+Black Hat Warning: Poorly designed session states
+(that don't clear and hold large internal variables) can DoS your server!
 
 ==== [Hack4]
 ## `BlackHat4:` Data & time limits
@@ -121,7 +121,7 @@ Return HTTP 301, 40x or 50x errors ([full list](http://www.w3.org/Protocols/rfc2
 <div class="whitehat">
 ## `WhiteHat4`: Data & time limits </div>
 
-Frequently change your IP address using [VPN/proxy services](http://robertwdempsey.com/hma) or [TOR](https://www.torproject.org/).
+Cycle your IP address using [VPN/proxy services](http://robertwdempsey.com/hma) or [TOR](https://www.torproject.org/) (see [TOR spiders](http://thoppe.github.io/tor_spiders/HnC_presentation.html#/)).
 _and_
 Slow down your scraper: Scrapy [autothrottle](http://doc.scrapy.org/en/latest/topics/autothrottle.html), custom timing code
 _and_
@@ -211,9 +211,9 @@ Stenography: embed data to identify and track IP/credentials.
 
 A legal strong-arm strategy, freely give data but track its distribution.
 
-Useful to determine ToS violations!
+Useful to determine ToS violations.
 
-Poison the well! Leave fake data buried deep within the dataset!
+Poison the well! Leave fake data buried deep within the dataset.
 ====*
 ### Image stenography
 Hide data in the EXIF header (obvious place, easy to remove), [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/)
@@ -263,15 +263,15 @@ Perturb date-times by seconds in data records and save the offset.
 
 ### Honeypots
 
-If a bot or persistent downloader is identified, feed them faulty data... ex.
-Continually degrade image quality sent as function of DL's
+If a bot or persistent downloader is identified, feed them faulty data.
+Continually degrade image quality sent as function of DL's.
 Remove rows, or return records not found with increasing frequency.
 
 ====*
 <div class="whitehat">
 ## `WhiteHat8`: Honeypots & Stenography </div>
 
-Download data multiple times from different sources.
+Download data multiple times from different origins.
 
 Run `diff` commands to suss out data that changes by IP and user.
 
@@ -456,7 +456,9 @@ Any data payload can be inserted here (e.g. copyright claims, point of origin, e
 
 Render document to PDF and remap fonts _per document_ for protected data.
 ### Example: [font_remapping.pdf](images/font_remapping.pdf)
+====+
 
+  
 WTH? How does it work?
 > A PDF is a collection of symbols drawn on a page. Draw `c` here, draw `a` there, etc. A PDF reader only knows what a letter is because it maps to a specific character code in the font. Simply create a new font that lies about its mapping.
 

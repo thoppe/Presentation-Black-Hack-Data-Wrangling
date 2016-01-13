@@ -265,7 +265,7 @@ $ js-beautify file.js</code></pre>
 Create session ID's with headless browsers<br><em>and</em><br>simulate user-agents</p>
 <br>
 <p>
-Poorly designed session states (that don't clear and hold<br>large internal variables) can DoS your server!</p>
+Black Hat Warning: Poorly designed session states<br>(that don't clear and hold large internal variables) can DoS your server!</p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack4"  class="vertical-slide">
@@ -282,7 +282,7 @@ Rate limit individual IP addresses or a specific id.<br>Delay content delivery.<
 <div class="whitehat"><h2><code>WhiteHat4</code>: Data & time limits </div></h2></p>
 <br>
 <p>
-Frequently change your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a>.<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
+Cycle your IP address using <a href="http://robertwdempsey.com/hma">VPN/proxy services</a> or <a href="https://www.torproject.org/">TOR</a> (see <a href="http://thoppe.github.io/tor_spiders/HnC_presentation.html#/">TOR spiders</a>).<br><em>and</em><br>Slow down your scraper: Scrapy <a href="http://doc.scrapy.org/en/latest/topics/autothrottle.html">autothrottle</a>, custom timing code<br><em>and</em><br>Change your user agent: Scrapy <a href="https://github.com/cnu/scrapy-random-useragent">random user agent</a>, <a href="http://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-urlopen">custom Python code</a></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack5"  class="vertical-slide">
@@ -377,10 +377,10 @@ ADD CONTENT!</p>
 A legal strong-arm strategy, freely give data but track its distribution.</p>
 <br>
 <p>
-Useful to determine ToS violations!</p>
+Useful to determine ToS violations.</p>
 <br>
 <p>
-Poison the well! Leave fake data buried deep within the dataset!</p>
+Poison the well! Leave fake data buried deep within the dataset.</p>
 </section><section   class="vertical-slide">
 <p>
 <h3>Image stenography</h3>Hide data in the EXIF header (obvious place, easy to remove), <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a></p>
@@ -445,13 +445,13 @@ Works for any lossy format (mp3, gif, etc...)<br>For tabular data, hide identifi
 <h3>Honeypots</h3></p>
 <br>
 <p>
-If a bot or persistent downloader is identified, feed them faulty data... ex.<br>Continually degrade image quality sent as function of DL's<br>Remove rows, or return records not found with increasing frequency.</p>
+If a bot or persistent downloader is identified, feed them faulty data.<br>Continually degrade image quality sent as function of DL's.<br>Remove rows, or return records not found with increasing frequency.</p>
 </section><section   class="vertical-slide">
 <p>
 <div class="whitehat"><h2><code>WhiteHat8</code>: Honeypots & Stenography </div></h2></p>
 <br>
 <p>
-Download data multiple times from different sources.</p>
+Download data multiple times from different origins.</p>
 <br>
 <p>
 Run <code>diff</code> commands to suss out data that changes by IP and user.</p>
@@ -644,14 +644,14 @@ Any data payload can be inserted here (e.g. copyright claims, point of origin, e
 <h2>Font remapping</h2></p>
 <br>
 <p>
-Render document to PDF and remap fonts <em>per document</em> for protected data.<h3>Example: <a href="images/font_remapping.pdf">font_remapping.pdf</a></h3></p>
+Render document to PDF and remap fonts <em>per document</em> for protected data.<h3>Example: <a href="images/font_remapping.pdf">font_remapping.pdf</a></h3><div class="fragment"></p>
 <br>
 <p>
 WTH? How does it work?</p>
 <blockquote>A PDF is a collection of symbols drawn on a page. Draw `c` here, draw `a` there, etc. A PDF reader only knows what a letter is because it maps to a specific character code in the font. Simply create a new font that lies about its mapping.</blockquote>
 <br>
 <p>
-Multiple fonts can be used to improve the "encryption" process,<br>one font per character gives a one-time pad!</p>
+Multiple fonts can be used to improve the "encryption" process,<br>one font per character gives a one-time pad!<br></div></p>
 </section><section   class="vertical-slide">
 <p>
 <div class="whitehat"><h2><code>WhiteHat12</code>: Text remapping </div></h2></p>
