@@ -300,23 +300,43 @@ Remove markup. You can't rip what you can't see.
 
 ====*
 <div class="whitehat">
-## `WhiteHat10`: Remove markup</div>
+## `WhiteHat9`: Remove markup</div>
+
+Rare in the wild as this makes web development a nightmare.
+_often found when dev's use lazy CMS..._
+
+Removing meta data slows users down, but syntax rules can be written per item:
+    html = '''
+    <div style="font-weight: bold;">
+    Preston Garvey </br>
+    Piper Wright
+    </div>'''
+    
+    import bs4
+    soup = bs4.BeautifulSoup(html,'lxml')
+    text = soup.div.text
+    names = text.strip().split('\n')
+    
+    keys = "firstname", "lastname"
+    data = [dict(zip(keys,x.split())) for x in names]
+    
+    print data
+    # [{'lastname': u'Garvey', 'firstname': u'Preston'}, {'lastname': u'Wright', 'firstname': u'Piper'}]
 
 ==== [Hack10]
 ## `BlackHat10`: HTML obfuscation
-implementation *EASY* : defense *STRONG* : hack-level *SCRIPT-KIDDIE*
+implementation *EASY* : defense *REASONABLE* : hack-level *SCRIPT-KIDDIE*
 
 Encode everything with HTML character codes and insert random benign HTML.
 
 Start with this:
     This is a string of text
-
 Encode to this:
-    &#84;&#104;&#105;&#115;&#32;&#105;&#115;&#32;&#97;<u></u>&#32;&#115;<i></i>&#116;&#114;&#105;<u></u>&#110;&#103;<i></i>&#32;<u></u>&#111;&#102;&#32;&#116;&#101;&#120;&#116;
-
+    &#84;&#104;&#105;&#115;&#32;&#105;&#115;&#32;&#97;<u></u>&#32;&#115;
+    <i></i>&#116;&#114;&#105;<u></u>&#110;&#103;<i></i>&#32;<u></u>&#111;&#102;&#32;&#116;&#101;&#120;&#116;
 'View Source' shows this:
-    <p>
-    &#84;&#104;&#105;&#115;&#32;&#112;&#97;&#103;&#101;&#32;&#105;&#115;<i></i>&#32;<u></u>&#109;&#101;&#97;&#110;<b></b>
+    <p>&#84;&#104;&#105;&#115;&#32;&#112;&#97;&#103;&#101;
+    &#32;&#105;&#115;<i></i>&#32;<u></u>&#109;&#101;&#97;&#110;<b></b>
 
 
 
@@ -342,6 +362,8 @@ implementation *HARD* : defense *STRONG* : hack-level *CORPORATE*
 ###Convert all Text to PDF
 Use [PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) or [PDFKit](http://pdfkit.org/) (node.js)
 
+Eschew style conventions and use multi-columns!
+
 ====*
 <div class="whitehat">  
 ## `WhiteHat11`: Serving HTML as PDF </div>
@@ -349,10 +371,6 @@ Use [PhantomJS](http://phantomjs.org/), [Wkhtmltopdf](http://wkhtmltopdf.org/) o
 Use OCR to extract text and images from the text
 _or_
 [Tabula](http://tabula.technology/) to extract tabular data
-
-Throw money and humans at it:
-[Mechanial Turk](https://www.mturk.com/mturk/welcome)
-
 
 ==== [Hack12]
 ## `BlackHat12`: Text remapping
@@ -431,4 +449,10 @@ one font per character gives a one-time pad!
 <div class="whitehat">
 ## `WhiteHat12`: Text remapping </div>
 
+For *Javascript* remapping use a headless browser. For *hidden spans*, learn and write custom rules to remove the offending page elements. For *font remapping*...
+====+
+<br>
+Throw money and humans at it: [Mechanial Turk](https://www.mturk.com/mturk/welcome)
+!(images/baby_rain.gif) <<transparent;height:420px>>  
+!(images/monkey.gif) <<transparent;height:420px>>  
 

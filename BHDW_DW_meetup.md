@@ -87,7 +87,7 @@ hack-level : *SCRIPT-KIDDIE* : *CORPORATE* : *HOLLYWOOD*
 {"include":"hacks.md"}
 ==== 
 
-# Thanks you!
+# Thanks, you!
 
 Got any more Black Hat Hacks? Let us know!
 ##### `#blackhatdata` / [@metasemantic](https://twitter.com/metasemantic) / [@rdempsey](https://twitter.com/rdempsey)

@@ -484,12 +484,34 @@ Piper Wright
 &lt;/div&gt;</code></pre>
 </section><section   class="vertical-slide">
 <p>
-<div class="whitehat"><h2><code>WhiteHat10</code>: Remove markup</div></h2></p>
+<div class="whitehat"><h2><code>WhiteHat9</code>: Remove markup</div></h2></p>
+<br>
+<p>
+Rare in the wild as this makes web development a nightmare.<br><em>often found when dev's use lazy CMS...</em></p>
+<br>
+<p>
+Removing meta data slows users down, but syntax rules can be written per item:</p>
+<pre><code class=python>html = '''
+&lt;div style=&quot;font-weight: bold;&quot;&gt;
+Preston Garvey &lt;/br&gt;
+Piper Wright
+&lt;/div&gt;'''
+
+import bs4
+soup = bs4.BeautifulSoup(html,'lxml')
+text = soup.div.text
+names = text.strip().split('\n')
+
+keys = &quot;firstname&quot;, &quot;lastname&quot;
+data = [dict(zip(keys,x.split())) for x in names]
+
+print data
+# [{'lastname': u'Garvey', 'firstname': u'Preston'}, {'lastname': u'Wright', 'firstname': u'Piper'}]</code></pre>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack10"  class="vertical-slide">
 <p>
-<h2><code>BlackHat10</code>: HTML obfuscation</h2>implementation <strong>EASY</strong> : defense <strong>STRONG</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
+<h2><code>BlackHat10</code>: HTML obfuscation</h2>implementation <strong>EASY</strong> : defense <strong>REASONABLE</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
 <br>
 <p>
 Encode everything with HTML character codes and insert random benign HTML.</p>
@@ -497,15 +519,14 @@ Encode everything with HTML character codes and insert random benign HTML.</p>
 <p>
 Start with this:</p>
 <pre><code class=python>This is a string of text</code></pre>
-<br>
 <p>
 Encode to this:</p>
-<pre><code class=python>&amp;#84;&amp;#104;&amp;#105;&amp;#115;&amp;#32;&amp;#105;&amp;#115;&amp;#32;&amp;#97;&lt;u&gt;&lt;/u&gt;&amp;#32;&amp;#115;&lt;i&gt;&lt;/i&gt;&amp;#116;&amp;#114;&amp;#105;&lt;u&gt;&lt;/u&gt;&amp;#110;&amp;#103;&lt;i&gt;&lt;/i&gt;&amp;#32;&lt;u&gt;&lt;/u&gt;&amp;#111;&amp;#102;&amp;#32;&amp;#116;&amp;#101;&amp;#120;&amp;#116;</code></pre>
-<br>
+<pre><code class=python>&amp;#84;&amp;#104;&amp;#105;&amp;#115;&amp;#32;&amp;#105;&amp;#115;&amp;#32;&amp;#97;&lt;u&gt;&lt;/u&gt;&amp;#32;&amp;#115;
+&lt;i&gt;&lt;/i&gt;&amp;#116;&amp;#114;&amp;#105;&lt;u&gt;&lt;/u&gt;&amp;#110;&amp;#103;&lt;i&gt;&lt;/i&gt;&amp;#32;&lt;u&gt;&lt;/u&gt;&amp;#111;&amp;#102;&amp;#32;&amp;#116;&amp;#101;&amp;#120;&amp;#116;</code></pre>
 <p>
 'View Source' shows this:</p>
-<pre><code class=python>&lt;p&gt;
-&amp;#84;&amp;#104;&amp;#105;&amp;#115;&amp;#32;&amp;#112;&amp;#97;&amp;#103;&amp;#101;&amp;#32;&amp;#105;&amp;#115;&lt;i&gt;&lt;/i&gt;&amp;#32;&lt;u&gt;&lt;/u&gt;&amp;#109;&amp;#101;&amp;#97;&amp;#110;&lt;b&gt;&lt;/b&gt;</code></pre>
+<pre><code class=python>&lt;p&gt;&amp;#84;&amp;#104;&amp;#105;&amp;#115;&amp;#32;&amp;#112;&amp;#97;&amp;#103;&amp;#101;
+&amp;#32;&amp;#105;&amp;#115;&lt;i&gt;&lt;/i&gt;&amp;#32;&lt;u&gt;&lt;/u&gt;&amp;#109;&amp;#101;&amp;#97;&amp;#110;&lt;b&gt;&lt;/b&gt;</code></pre>
 </section><section   class="vertical-slide">
 <p>
 <div class="whitehat"><h2><code>WhiteHat10</code>: HTML obfuscation </div></h2></p>
@@ -529,15 +550,15 @@ Use the <a href="http://www.seleniumhq.org/projects/webdriver/">Selenium Web Dri
 <br>
 <p>
 <h3>Convert all Text to PDF</h3>Use <a href="http://phantomjs.org/">PhantomJS</a>, <a href="http://wkhtmltopdf.org/">Wkhtmltopdf</a> or <a href="http://pdfkit.org/">PDFKit</a> (node.js)</p>
+<br>
+<p>
+Eschew style conventions and use multi-columns!</p>
 </section><section   class="vertical-slide">
 <p>
 <div class="whitehat"><h2><code>WhiteHat11</code>: Serving HTML as PDF </div></h2></p>
 <br>
 <p>
 Use OCR to extract text and images from the text<br><em>or</em><br><a href="http://tabula.technology/">Tabula</a> to extract tabular data</p>
-<br>
-<p>
-Throw money and humans at it:<br><a href="https://www.mturk.com/mturk/welcome">Mechanial Turk</a></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack12"  class="vertical-slide">
@@ -616,11 +637,28 @@ Multiple fonts can be used to improve the "encryption" process,<br>one font per 
 </section><section   class="vertical-slide">
 <p>
 <div class="whitehat"><h2><code>WhiteHat12</code>: Text remapping </div></h2></p>
+<br>
+<p>
+For <strong>Javascript</strong> remapping use a headless browser. For <strong>hidden spans</strong>, learn and write custom rules to remove the offending page elements. For <strong>font remapping</strong>...<div class="fragment"><br><br>Throw money and humans at it: <a href="https://www.mturk.com/mturk/welcome">Mechanial Turk</a></p>
+<figure>
+    <a href="images/baby_rain.gif">
+    <img class="transparent_image" src="images/baby_rain.gif" height="420px">
+    </a>
+    
+    </figure>
+<figure>
+    <a href="images/monkey.gif">
+    <img class="transparent_image" src="images/monkey.gif" height="420px">
+    </a>
+    
+    </figure>
+<p>
+</div></p>
 </section>
 </section><section class="vertical-stack">
 <section   class="vertical-slide">
 <p>
-<h1>Thanks you!</h1></p>
+<h1>Thanks, you!</h1></p>
 <br>
 <p>
 Got any more Black Hat Hacks? Let us know!<h5><code>#blackhatdata</code> / <a href="https://twitter.com/metasemantic">@metasemantic</a> / <a href="https://twitter.com/rdempsey">@rdempsey</a></h5></p>
