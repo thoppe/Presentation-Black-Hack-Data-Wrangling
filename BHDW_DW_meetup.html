@@ -310,10 +310,16 @@ Forces the user to simulate AJAX (stops headless browsers).<br><em>Combine with 
 <div class="whitehat"><h2><code>WhiteHat6</code>: JavaScript page links </div></h2></p>
 <br>
 <p>
-Stateful browser can slowly pull the data like a real user.</p>
+Don't emulate a browser, <em>be</em> the browser! Selenium ex.</p>
 <br>
-<p>
-SHOW EXAMPLE:</p>
+<pre><code class=python>from selenium import webdriver
+from selenium.webdriver.common.by import By
+driver = webdriver.Firefox()
+driver.get('http://www.google.com')
+
+q = driver.find_element(By.NAME, 'q')
+q.send_keys('Black Hat Data Wrangling')
+q.submit()</code></pre>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack7"  class="vertical-slide">

@@ -157,9 +157,17 @@ shows this frustrates the user with lack of control.
 <div class="whitehat">
 ## `WhiteHat6`: JavaScript page links </div>
 
-Stateful browser can slowly pull the data like a real user.
+Don't emulate a browser, _be_ the browser! Selenium ex.
 
-SHOW EXAMPLE:
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    driver = webdriver.Firefox()
+    driver.get('http://www.google.com')
+    
+    q = driver.find_element(By.NAME, 'q')
+    q.send_keys('Black Hat Data Wrangling')
+    q.submit()
+
 
 ==== [Hack7]
 ## `BlackHat7`: Watermarking
