@@ -202,21 +202,21 @@ Can watermark non images too!
 ## `WhiteHat7`: Watermarking
 </div>
 
-*Simple removal*
+### Simple removal
 Crop the picture in any photo editor
 _or_
 Use the restoration function in [Inpaint](http://www.theinpaint.com/): $20
 
-*More complex removal*
+### More complex removal
 "Content Aware Fill" in Photoshop
 
 ====*
 
-*Cropping*
+### Cropping
 !(images/watermark_examples/remove-text-photoshop-label.jpg) <<height:300:px;transparent>>
 !(images/watermark_examples/remove-text-photoshop-label-crop.jpg) <<height:300:px;transparent>>
 
-*Content Aware Fill in Photoshop*
+### Content Aware Fill in Photoshop
 !(images/watermark_examples/remove-watermark-photoshop-cross-overlay.jpg) <<height:300:px;transparent>>
 !(images/watermark_examples/remove-watermark-photoshop-cross-overlay-filled.jpg) <<height:300:px;transparent>>
 
