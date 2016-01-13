@@ -5,15 +5,15 @@
 #### [Disable right-click](#Hack1) [T]
 #### [Minification](#Hack2) [R]
 #### [Authentication](#Hack3) [T]
-#### [Data Limits](#Hack4) [R]
-#### [Rendering to Images](#Hack5) [R]
+#### [Data limits](#Hack4) [R]
+#### [Rendering to images](#Hack5) [R]
 #### [JavaScript page links](#Hack6) [T]
 #### [Watermarking](#Hack7) [R, partially drafted, missing WH]
 #### [Honeypots & Stenography](#Hack8) [T]
 #### [Remove markup metadata](#Hack9) [T]
 #### [HTML obfuscation](#Hack10) [R]
 #### [Serving HTML as PDF](#Hack11) [R]
-#### [Text remapping](#Hack12) [T, missing WH]
+#### [Text remapping](#Hack12) [T]
 
 ==== [Hack1]
 
@@ -47,10 +47,28 @@ Also in this category, CSS overlays.
 ## `BlackHat2`: Minification
 implementation *EASY* : defense *WEAK* : hack-level *SCRIPT-KIDDIE*
 
-[Kangax HTML Minifier](https://github.com/kangax/html-minifier): removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.
-
-Ruby wrapper: [html_minifier](https://github.com/stereobooster/html_minifier)
-
+[Kangax HTML Minifier](https://github.com/kangax/html-minifier): removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS. Ruby wrapper: [html_minifier](https://github.com/stereobooster/html_minifier)
+#### INPUT
+    <div class="reveal">
+        <div class="slides">
+            <section class="vertical-stack">
+                <section class="vertical-slide">
+                    <h1>Black Hat</h1>
+                    <h1>Data Wrangling</h1>
+                    <hr>
+                    <h3><a href="http://thoppe.github.io/">Travis Hoppe</a> /
+                    <a href=
+                    "http://robertwdempsey.com/about-robert-dempsey/">Robert
+                    Dempsey</a></h3><a href=
+                    "https://twitter.com/metasemantic">@metasemantic</a> /
+                    <a href="https://twitter.com/rdempsey">@rdempsey</a>
+                    <br>
+                </section>
+            </section>
+        </div>
+    </div>
+#### OUTPUT 
+    <div class=reveal><div class=slides><section class=vertical-stack><section class=vertical-slide><h1>Black Hat</h1><h1>Data Wrangling</h1><hr><h3><a href="http://thoppe.github.io/">Travis Hoppe</a> / <a href="http://robertwdempsey.com/about-robert-dempsey/">Robert Dempsey</a></h3><a href=https://twitter.com/metasemantic>@metasemantic</a> / <a href=https://twitter.com/rdempsey>@rdempsey</a><p></p><br></section></section></div></div>
 
 ====*
 <div class="whitehat">

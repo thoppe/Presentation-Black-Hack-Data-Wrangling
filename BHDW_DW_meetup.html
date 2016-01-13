@@ -178,7 +178,7 @@ hack-level : <strong>SCRIPT-KIDDIE</strong> : <strong>CORPORATE</strong> : <stro
 <h3>Table of Contents</h3></p>
 <br>
 <p>
-<h4><a href="#Hack1">Disable right-click</a> [T]</h4><h4><a href="#Hack2">Minification</a> [R]</h4><h4><a href="#Hack3">Authentication</a> [T]</h4><h4><a href="#Hack4">Data Limits</a> [R]</h4><h4><a href="#Hack5">Rendering to Images</a> [R]</h4><h4><a href="#Hack6">JavaScript page links</a> [T]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted, missing WH]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R]</h4><h4><a href="#Hack11">Serving HTML as PDF</a> [R]</h4><h4><a href="#Hack12">Text remapping</a> [T, missing WH]</h4></p>
+<h4><a href="#Hack1">Disable right-click</a> [T]</h4><h4><a href="#Hack2">Minification</a> [R]</h4><h4><a href="#Hack3">Authentication</a> [T]</h4><h4><a href="#Hack4">Data limits</a> [R]</h4><h4><a href="#Hack5">Rendering to images</a> [R]</h4><h4><a href="#Hack6">JavaScript page links</a> [T]</h4><h4><a href="#Hack7">Watermarking</a> [R, partially drafted, missing WH]</h4><h4><a href="#Hack8">Honeypots & Stenography</a> [T]</h4><h4><a href="#Hack9">Remove markup metadata</a> [T]</h4><h4><a href="#Hack10">HTML obfuscation</a> [R]</h4><h4><a href="#Hack11">Serving HTML as PDF</a> [R]</h4><h4><a href="#Hack12">Text remapping</a> [T]</h4></p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack1"  class="vertical-slide">
@@ -216,10 +216,28 @@ Also in this category, CSS overlays.</p>
 <h2><code>BlackHat2</code>: Minification</h2>implementation <strong>EASY</strong> : defense <strong>WEAK</strong> : hack-level <strong>SCRIPT-KIDDIE</strong></p>
 <br>
 <p>
-<a href="https://github.com/kangax/html-minifier">Kangax HTML Minifier</a>: removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS.</p>
-<br>
+<a href="https://github.com/kangax/html-minifier">Kangax HTML Minifier</a>: removes comments, whitespace, empty elements, and much more. Also minifies javascript and CSS. Ruby wrapper: <a href="https://github.com/stereobooster/html_minifier">html_minifier</a><h4>INPUT</h4></p>
+<pre><code class=python>&lt;div class=&quot;reveal&quot;&gt;
+    &lt;div class=&quot;slides&quot;&gt;
+        &lt;section class=&quot;vertical-stack&quot;&gt;
+            &lt;section class=&quot;vertical-slide&quot;&gt;
+                &lt;h1&gt;Black Hat&lt;/h1&gt;
+                &lt;h1&gt;Data Wrangling&lt;/h1&gt;
+                &lt;hr&gt;
+                &lt;h3&gt;&lt;a href=&quot;http://thoppe.github.io/&quot;&gt;Travis Hoppe&lt;/a&gt; /
+                &lt;a href=
+                &quot;http://robertwdempsey.com/about-robert-dempsey/&quot;&gt;Robert
+                Dempsey&lt;/a&gt;&lt;/h3&gt;&lt;a href=
+                &quot;https://twitter.com/metasemantic&quot;&gt;@metasemantic&lt;/a&gt; /
+                &lt;a href=&quot;https://twitter.com/rdempsey&quot;&gt;@rdempsey&lt;/a&gt;
+                &lt;br&gt;
+            &lt;/section&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 <p>
-Ruby wrapper: <a href="https://github.com/stereobooster/html_minifier">html_minifier</a></p>
+<h4>OUTPUT</h4></p>
+<pre><code class=python>&lt;div class=reveal&gt;&lt;div class=slides&gt;&lt;section class=vertical-stack&gt;&lt;section class=vertical-slide&gt;&lt;h1&gt;Black Hat&lt;/h1&gt;&lt;h1&gt;Data Wrangling&lt;/h1&gt;&lt;hr&gt;&lt;h3&gt;&lt;a href=&quot;http://thoppe.github.io/&quot;&gt;Travis Hoppe&lt;/a&gt; / &lt;a href=&quot;http://robertwdempsey.com/about-robert-dempsey/&quot;&gt;Robert Dempsey&lt;/a&gt;&lt;/h3&gt;&lt;a href=https://twitter.com/metasemantic&gt;@metasemantic&lt;/a&gt; / &lt;a href=https://twitter.com/rdempsey&gt;@rdempsey&lt;/a&gt;&lt;p&gt;&lt;/p&gt;&lt;br&gt;&lt;/section&gt;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;</code></pre>
 </section><section   class="vertical-slide">
 <p>
 <div class="whitehat"><h2><code>WhiteHat2</code>: Minification </div></h2>De-minify the HTML using freely available tools.</p>
