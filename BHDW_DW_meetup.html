@@ -404,7 +404,7 @@ Can watermark non images too!</p>
 </section><section class="vertical-stack">
 <section id="Hack8"  class="vertical-slide">
 <p>
-<h2><code>BlackHat8</code>: Honeypots & Stenography</h2>implementation <strong>HARD</strong> : defense <strong>RIDICULOUS</strong> : hack-level <strong>HOLLYWOOD</strong><br>Stenography: embed data to identify and track IP/credentials.</p>
+<h2><code>BlackHat8</code>: Honeypots & Steganography</h2>implementation <strong>HARD</strong> : defense <strong>RIDICULOUS</strong> : hack-level <strong>HOLLYWOOD</strong><br>Steganography: embed data to identify and track IP/credentials.</p>
 <br>
 <p>
 A legal strong-arm strategy, freely give data but track its distribution.</p>
@@ -416,7 +416,7 @@ Useful to determine ToS violations.</p>
 Poison the well! Leave fake data buried deep within the dataset.</p>
 </section><section   class="vertical-slide">
 <p>
-<h3>Image stenography</h3>Hide data in the EXIF header (obvious place, easy to remove), <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a></p>
+<h3>Image steganography</h3>Hide data in the EXIF header (obvious place, easy to remove), <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a></p>
 <figure>
     <a href="images/honeypot_examples/panda.jpg">
     <img class="" src="images/honeypot_examples/panda.jpg" >
@@ -438,7 +438,7 @@ Poison the well! Leave fake data buried deep within the dataset.</p>
    ...</code></pre>
 </section><section   class="vertical-slide">
 <p>
-<h3>Image stenography</h3>Map post-filter md5sum to user data (not resistant to image changes).<br>Impossible for user to know what is being stored!</p>
+<h3>Image steganography</h3>Map post-filter md5sum to user data (not resistant to image changes).<br>Impossible for user to know what is being stored!</p>
 <br>
 <pre><code class=python>import numpy as np
 from scipy.ndimage import imread
@@ -469,7 +469,7 @@ imsave(&quot;panda_new.jpg&quot;, jpg)
     </figure>
 </section><section   class="vertical-slide">
 <p>
-<h3>General stenography</h3></p>
+<h3>General steganography</h3></p>
 <br>
 <p>
 Works for any lossy format (mp3, gif, etc...)<br>For tabular data, hide identification in NULL fields that can be easily removed.<br>Perturb date-times by seconds in data records and save the offset.</p>
@@ -481,7 +481,7 @@ Works for any lossy format (mp3, gif, etc...)<br>For tabular data, hide identifi
 If a bot or persistent downloader is identified, feed them faulty data.<br>Continually degrade image quality sent as function of DL's.<br>Remove rows, or return records not found with increasing frequency.</p>
 </section><section   class="vertical-slide">
 <p>
-<div class="whitehat"><h2><code>WhiteHat8</code>: Honeypots & Stenography </div></h2></p>
+<div class="whitehat"><h2><code>WhiteHat8</code>: Honeypots & Steganography </div></h2></p>
 <br>
 <p>
 Download data multiple times from different origins.</p>
@@ -493,7 +493,7 @@ Run <code>diff</code> commands to suss out data that changes by IP and user.</p>
 Sanitize data by rejecting fields and entries that change with alternative DLs.</p>
 <br>
 <p>
-Modify image to remove stenography (apply same trick twice!)</p>
+Modify image to remove steganography (apply same trick twice!)</p>
 </section>
 </section><section class="vertical-stack">
 <section id="Hack9"  class="vertical-slide">
