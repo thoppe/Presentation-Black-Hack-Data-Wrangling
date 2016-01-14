@@ -223,9 +223,9 @@ Use the restoration function in [Inpaint](http://www.theinpaint.com/): $20
 
   
 ==== [Hack8]
-## `BlackHat8`: Honeypots & Stenography
+## `BlackHat8`: Honeypots & Steganography
 implementation *HARD* : defense *RIDICULOUS* : hack-level *HOLLYWOOD*
-Stenography: embed data to identify and track IP/credentials.
+Steganography: embed data to identify and track IP/credentials.
 
 A legal strong-arm strategy, freely give data but track its distribution.
 
@@ -233,7 +233,7 @@ Useful to determine ToS violations.
 
 Poison the well! Leave fake data buried deep within the dataset.
 ====*
-### Image stenography
+### Image steganography
 Hide data in the EXIF header (obvious place, easy to remove), [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/)
 !(images/honeypot_examples/panda.jpg) [Kevin Dooley, Flickr](https://flic.kr/p/9eopJm)
 
@@ -251,7 +251,7 @@ Hide data in the EXIF header (obvious place, easy to remove), [ExifTool](http://
        ...
 
 ====*
-### Image stenography
+### Image steganography
 Map post-filter md5sum to user data (not resistant to image changes).
 Impossible for user to know what is being stored! 
 
@@ -273,7 +273,7 @@ Impossible for user to know what is being stored!
 !(images/honeypot_examples/panda.jpg) 
 !(images/honeypot_examples/panda_new.jpg)
 ====*
-### General stenography
+### General steganography
 
 Works for any lossy format (mp3, gif, etc...)
 For tabular data, hide identification in NULL fields that can be easily removed.
@@ -287,7 +287,7 @@ Remove rows, or return records not found with increasing frequency.
 
 ====*
 <div class="whitehat">
-## `WhiteHat8`: Honeypots & Stenography </div>
+## `WhiteHat8`: Honeypots & Steganography </div>
 
 Download data multiple times from different origins.
 
@@ -295,7 +295,7 @@ Run `diff` commands to suss out data that changes by IP and user.
 
 Sanitize data by rejecting fields and entries that change with alternative DLs.
 
-Modify image to remove stenography (apply same trick twice!)
+Modify image to remove steganography (apply same trick twice!)
 
 
 ==== [Hack9]
